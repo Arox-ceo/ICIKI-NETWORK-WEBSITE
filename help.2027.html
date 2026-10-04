@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#150B2D">
+<meta name="description" content="Pusat bantuan ICIKI NETWORK — kontak, panduan support, kebijakan refund, dan pertanyaan umum.">
+<title>ICIKI NETWORK | Bantuan</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#150B2D;--wine:#581018;--red:#BE1522;--or:#F19A0C;--em:#E3592F;--gold:#FAF180;--pink:#FF0066;--tx:#f6f0ff;--mut:#b9abd6;--card:rgba(36,18,70,.6);--bd:rgba(250,241,128,.14);--grad:linear-gradient(120deg,var(--gold),var(--or) 50%,var(--pink))}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+body{font-family:'Chakra Petch','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 0,rgba(190,21,34,.5),transparent 70%),radial-gradient(40% 40% at 95% 55%,rgba(138,53,199,.3),transparent 70%),radial-gradient(45% 40% at 0 85%,rgba(88,16,24,.8),transparent 70%)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+html.modal-open body{overflow:hidden}
+/* nav */
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(1240px,94%);z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px 9px 18px;border-radius:999px;background:rgba(21,11,45,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--bd);transition:background .3s,box-shadow .3s}
+nav.sc{background:rgba(21,11,45,.94);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:44px;border-radius:8px;display:block}
+.links{display:flex;gap:2px}
+.links a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:99px;font-weight:500;font-size:.95rem;transition:.2s}
+.links a:hover,.links a.cur{color:var(--gold);background:rgba(255,255,255,.07)}
+.acts{display:flex;gap:8px;align-items:center}
+#burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:rgba(255,255,255,.06);color:var(--tx);font-size:1.1rem;cursor:pointer}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 28px;border-radius:99px;border:0;font:600 1rem 'Chakra Petch',sans-serif;cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--red),var(--pink));box-shadow:0 6px 24px rgba(255,0,102,.35);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(255,0,102,.55)}
+.gold{background:linear-gradient(135deg,var(--gold),var(--or));color:#2b1000;box-shadow:0 6px 24px rgba(241,154,12,.35)}
+.gold:hover{box-shadow:0 10px 32px rgba(241,154,12,.6)}
+.ghost{background:rgba(255,255,255,.07);border:1px solid var(--bd);box-shadow:none}
+.sm{padding:9px 18px;font-size:.88rem}
+.lang{display:flex;padding:3px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid var(--bd)}
+.lang button{border:0;background:none;color:var(--mut);font:600 .8rem 'Chakra Petch',sans-serif;padding:6px 11px;border-radius:99px;cursor:pointer;transition:.2s}
+.lang button.on{background:var(--gold);color:var(--wine)}
+/* hero */
+.hero{text-align:center;padding:150px 5% 40px;max-width:760px;margin:0 auto}
+h1{font:clamp(1.8rem,7vw,4rem)/1.2 'Press Start 2P',monospace;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 0 var(--wine)) drop-shadow(0 0 32px rgba(190,21,34,.6));animation:drop .8s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes drop{from{opacity:0;transform:translateY(-30px) scale(.97)}}
+.hero p{margin:24px auto 0;max-width:540px;font-size:1.12rem;color:var(--mut)}
+.toc{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:26px}
+.toc a{padding:8px 16px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid var(--bd);color:var(--tx);text-decoration:none;font-size:.9rem;transition:.2s}
+.toc a:hover{background:var(--gold);color:var(--wine)}
+/* sections */
+section{padding:56px 5%;max-width:1200px;margin:0 auto}
+.hd{text-align:center;margin-bottom:36px}
+.hd h2{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2}
+.hd p{color:var(--mut);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:30px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.ct{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.ct h3{font-size:1.3rem}
+.ct p{color:var(--mut);margin-bottom:18px}
+.ct code{color:var(--gold);word-break:break-all;margin:-6px 0 18px}
+.ct .btn{margin-top:auto}
+.hl{border-color:rgba(250,241,128,.45);background:linear-gradient(160deg,rgba(88,16,24,.75),rgba(36,18,70,.7))}
+.ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:14px;background:linear-gradient(135deg,var(--red),var(--em));color:#fff;box-shadow:0 8px 22px rgba(190,21,34,.45)}
+/* guideline cards */
+.g h3{font-size:1.15rem;margin-bottom:10px;display:flex;align-items:center;gap:12px}
+.g h3 .ic{flex:none;width:44px;height:44px;border-radius:13px;font-size:1rem;margin:0;box-shadow:0 6px 18px rgba(190,21,34,.45)}
+.g>p{color:var(--mut)}
+.g a{color:var(--gold)}
+.g ul{list-style:none;color:var(--mut)}
+.g li{padding:6px 0 6px 24px;position:relative}
+.g li::before{content:'\f00c';font:900 .75rem 'Font Awesome 6 Free';position:absolute;left:0;top:11px;color:var(--gold)}
+.g.no li::before{content:'\f00d';color:var(--pink)}
+.rules{max-width:760px;margin:0 auto}
+.rules li{padding:10px 0 10px 28px;border-bottom:1px solid var(--bd)}
+.rules li:last-child{border:0}
+.rules li::before{top:15px}
+.time{max-width:760px;margin:0 auto 24px;display:flex;align-items:center;gap:16px;padding:18px 24px;border-radius:20px;background:linear-gradient(135deg,var(--wine),var(--red));border:1px solid rgba(255,0,102,.4)}
+.time i{font-size:1.8rem;color:var(--gold);flex:none}
+.time b{color:var(--gold)}
+.refund{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.refund .ok{border-top:4px solid #2ee59d}
+.refund .no{border-top:4px solid var(--pink)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:22px;counter-reset:s}
+.steps .card{counter-increment:s;position:relative;padding-top:42px}
+.steps .card::before{content:counter(s);position:absolute;top:-14px;left:22px;width:40px;height:40px;border-radius:11px;display:grid;place-items:center;font:.85rem 'Press Start 2P',monospace;background:var(--gold);color:var(--wine)}
+.steps h3{font-size:1.1rem;margin-bottom:6px}
+.steps p{color:var(--mut)}
+.out{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px}
+.out span.o{padding:10px 20px;border-radius:99px;border:1px solid var(--bd);background:rgba(255,255,255,.06)}
+.out b{margin-right:6px}
+/* faq */
+.faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+details{background:var(--card);border:1px solid var(--bd);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .2s}
+details[open]{border-color:rgba(241,154,12,.55)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 22px;min-height:56px;font-weight:600;font-size:1.08rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'\f067';font-family:'Font Awesome 6 Free';font-weight:900;color:var(--or);flex:none;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 20px;color:var(--mut)}
+details a{color:var(--gold)}
+details code{color:var(--gold);word-break:break-all}
+.more{text-align:center;margin-top:40px}
+.more p{color:var(--mut);margin-bottom:16px}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+/* footer */
+footer{margin-top:60px;padding:50px 5% 24px;background:rgba(21,11,45,.85);border-top:1px solid var(--bd)}
+.fc{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
+footer h3{color:var(--or);margin-bottom:16px}
+footer p,footer li a,footer li .lk{color:var(--mut)}
+footer ul{list-style:none}
+footer li{margin-bottom:10px}
+footer li a,footer li .lk{text-decoration:none;transition:.2s}
+footer li a:hover,footer li .lk:hover{color:var(--gold)}
+footer li i{width:22px;color:var(--em)}
+.lk{background:none;border:0;padding:0;font:inherit;cursor:pointer;text-align:left}
+.soc{display:flex;gap:10px;margin-top:20px}
+.soc a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:var(--tx);text-decoration:none;transition:.25s}
+.soc a:hover{background:var(--pink)}
+.fb{max-width:1200px;margin:34px auto 0;padding-top:22px;border-top:1px solid var(--bd);text-align:center;color:var(--mut);font-size:.9rem}
+/* discord popup */
+.modal{display:none;position:fixed;inset:0;z-index:4000;place-items:center;padding:20px;background:rgba(10,5,24,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.modal.open{display:grid;animation:fade .25s both}
+@keyframes fade{from{opacity:0}}
+.mbox{position:relative;width:min(420px,100%);padding:36px 28px 28px;border-radius:24px;text-align:center;background:linear-gradient(160deg,rgba(88,16,24,.95),rgba(36,18,70,.96));border:1px solid rgba(250,241,128,.45);box-shadow:0 24px 70px rgba(0,0,0,.6);animation:pop .35s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.94)}}
+.mbox .ic{margin:0 auto 16px;width:68px;height:68px;font-size:1.9rem;background:linear-gradient(135deg,#5865F2,#7983f5)}
+.mbox h3{font:1rem/1.4 'Press Start 2P',monospace;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+.mbox p{color:var(--mut);margin-bottom:22px}
+.mbox .btn{width:100%;justify-content:center}
+.mx{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:1px solid var(--bd);background:rgba(255,255,255,.08);color:var(--tx);font-size:1rem;cursor:pointer}
+.mx:hover{background:var(--pink)}
+@media(max-width:1100px){
+nav{top:max(10px,env(safe-area-inset-top))}
+.links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;gap:4px;padding:12px;border-radius:24px;background:rgba(21,11,45,.97);border:1px solid var(--bd);max-height:calc(100svh - 100px);overflow-y:auto}
+.links.open{display:flex}
+.links a{padding:14px 18px;font-size:1.05rem;min-height:48px;display:flex;align-items:center}
+#burger{display:block}
+.lang button{padding:9px 13px;min-height:36px}
+}
+@media(max-width:860px){
+.fc,.refund{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+.acts .btn span{display:none}
+.acts .btn{padding:10px 14px;min-width:42px;min-height:42px;justify-content:center}
+nav{padding:7px 8px 7px 12px;gap:6px}
+.brand img{height:38px}
+.acts{gap:6px}
+.hero{padding:120px 5% 24px}
+.hero p{font-size:1.02rem}
+section{padding:44px 5%}
+.card{padding:22px}
+.time{padding:16px 18px}
+summary{padding:14px 18px}
+details p{padding:0 18px 18px}
+.chips .btn{width:100%;justify-content:center}
+.soc a{width:44px;height:44px}
+footer{padding:40px 5% calc(24px + env(safe-area-inset-bottom));margin-top:40px}
+footer li a,footer li .lk{display:inline-block;padding:4px 0}
+}
+@media(max-width:400px){
+.brand img{height:34px}
+.lang button{padding:8px 10px}
+}
+@media(hover:none){.btn:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="brand" href="index.html"><img src="logo.png" alt="Logo ICIKI NETWORK" onerror="this.style.display='none'"></a>
+  <div class="links" id="links">
+    <a href="index.html" data-en="Home">Beranda</a><a href="shop.2027.html" data-en="Shop">Toko</a><a href="team.2027.html" data-en="Team">Tim</a><a href="status.2027.html">Status</a><a class="cur" href="help.2027.html" aria-current="page" data-en="Help">Bantuan</a><a href="rules.2027.html" data-en="Rules">Aturan</a><a href="ToS.2027.html">ToS</a>
+  </div>
+  <div class="acts">
+    <div class="lang" role="group" aria-label="Language"><button data-l="id" class="on" aria-pressed="true">ID</button><button data-l="en" aria-pressed="false">EN</button></div>
+    <a href="https://minecraft-mp.com/server/346397/vote/" class="btn gold sm" target="_blank" rel="noopener" aria-label="Vote"><i class="fas fa-vote-yea"></i><span>Vote</span></a>
+    <a href="https://discord.gg/JYS6N85TjE" class="btn sm" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i><span>Discord</span></a>
+    <button id="burger" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1 data-en="SUPPORT">BANTUAN</h1>
+  <p data-en="Having trouble with the server or a purchase? Contact our team, read the support guide, or check the answers below.">Ada kendala di server atau pembelian? Hubungi tim kami, baca panduan support, atau cek jawaban di bawah.</p>
+  <div class="toc">
+    <a href="#kontak" data-en="Contact">Kontak</a><a href="#aturan" data-en="Rules">Aturan</a><a href="#jenis" data-en="Support Types">Jenis Support</a><a href="#refund">Refund</a><a href="#proses" data-en="Process">Proses</a><a href="#faq">FAQ</a>
+  </div>
+</header>
+
+<section id="kontak">
+  <div class="hd"><h2 data-en="Contact Us">Hubungi Kami</h2><p data-en="Include your Minecraft username so we can help you faster.">Sebutkan username Minecraft-mu agar kami bisa membantu lebih cepat.</p></div>
+  <div class="grid">
+    <div class="card ct hl"><div class="ic"><i class="fab fa-discord"></i></div><h3 data-en="Discord (fastest)">Discord (tercepat)</h3><p data-en="Open a ticket in our Discord Support Center. Suitable for all kinds of questions.">Buka tiket di Support Center Discord kami. Cocok untuk semua jenis pertanyaan.</p><a href="https://discord.gg/JYS6N85TjE" class="btn gold" target="_blank" rel="noopener"><i class="fab fa-discord"></i><span data-en="Open Discord">Buka Discord</span></a></div>
+    <div class="card ct"><div class="ic"><i class="fas fa-envelope"></i></div><h3>Email</h3><p data-en="For payment issues or anything that needs proof and attachments.">Untuk masalah pembayaran atau hal yang perlu bukti dan lampiran.</p><code data-mail></code><a data-mail class="btn" href="#"><i class="fas fa-paper-plane"></i><span data-en="Send email">Kirim email</span></a></div>
+    <div class="card ct"><div class="ic"><i class="fas fa-flag"></i></div><h3 data-en="Report a player or bug">Lapor pemain atau bug</h3><p data-en="Include the username, the time of the incident, and a screenshot or video as proof.">Sertakan username, waktu kejadian, dan screenshot atau video sebagai bukti.</p><a href="https://discord.gg/JYS6N85TjE" class="btn ghost" target="_blank" rel="noopener"><i class="fas fa-flag"></i><span data-en="Send report">Kirim laporan</span></a></div>
+  </div>
+</section>
+
+<section id="aturan">
+  <div class="hd"><h2 data-en="Support Rules">Aturan Support</h2><p data-en="To keep our service orderly and effective, please follow these rules.">Agar layanan berjalan tertib dan efektif, harap patuhi aturan berikut.</p></div>
+  <div class="card g rules"><ul>
+    <li data-en="Use support only for matters relevant to the ICIKI NET Minecraft Server.">Gunakan layanan support hanya untuk kebutuhan yang relevan dengan Server Minecraft ICIKI NET.</li>
+    <li data-en="Use polite and clear language.">Gunakan bahasa yang sopan dan jelas.</li>
+    <li data-en="Do not misuse support for personal matters unrelated to the ICIKI NET Minecraft Server.">Dilarang menyalahgunakan support untuk kepentingan pribadi yang tidak relevan dengan Server Minecraft ICIKI NET.</li>
+    <li data-en="Please be patient while waiting for the support team. We will reply as soon as possible.">Bersabar menunggu respons tim support. Kami akan membalas secepat mungkin.</li>
+    <li data-en="Do not provide false information or manipulate evidence.">Dilarang memberikan informasi palsu atau memanipulasi bukti.</li>
+  </ul></div>
+</section>
+
+<section id="jenis">
+  <div class="hd"><h2 data-en="Support Types">Jenis Support</h2><p data-en="Issues the ICIKI NET Support Center can handle.">Masalah yang bisa ditangani Support Center ICIKI NET.</p></div>
+  <div class="grid">
+    <div class="card g"><h3><span class="ic"><i class="fas fa-user-shield"></i></span><span data-en="Player Report">Laporan Pemain</span></h3><p data-en="To report players who break the server rules.">Untuk melaporkan pemain yang melanggar aturan server.</p><ul>
+      <li data-en="Disruptive players">Player rusuh</li><li data-en="Scamming or fraud">Scamming atau penipuan</li><li data-en="Griefing (damaging other players' property outside the rules)">Griefing (merusak properti orang lain di luar aturan)</li><li data-en="Abusing bug">Abusing bug</li><li data-en="Username or skin that violates the rules">Username atau skin yang tidak sesuai aturan</li></ul></div>
+    <div class="card g"><h3><span class="ic"><i class="fas fa-user-tie"></i></span><span data-en="Staff Report">Laporan Staff</span></h3><p data-en="To report staff who abuse their authority or act unprofessionally.">Untuk melaporkan staff yang menyalahgunakan wewenang atau tidak profesional.</p><ul>
+      <li data-en="Abuse of power (command abuse)">Penyalahgunaan kekuasaan (abuse command)</li><li data-en="Unfair rule enforcement">Ketidakadilan dalam menegakkan aturan</li><li data-en="Inappropriate or toxic behavior">Perilaku tidak pantas atau toxic</li><li data-en="Unresponsive to players who need help">Tidak responsif terhadap pemain yang butuh bantuan</li></ul></div>
+    <div class="card g"><h3><span class="ic"><i class="fas fa-bug"></i></span><span data-en="Bugs &amp; Technical Issues">Bug &amp; Masalah Teknis</span></h3><p data-en="To report bugs that disrupt gameplay.">Untuk melaporkan bug yang mengganggu permainan.</p><ul>
+      <li data-en="Bugs related to items, mechanics, or server features">Bug terkait item, mekanik, atau fitur server</li><li data-en="Exploit bugs that players could abuse">Bug exploit yang bisa disalahgunakan pemain</li><li data-en="System errors that cause crashes or errors">Kesalahan sistem yang menyebabkan crash atau error</li><li data-en="Excessive lag, connection errors, or plugins not working">Lag berlebihan, error koneksi, atau plugin tidak berfungsi</li></ul></div>
+    <div class="card g"><h3><span class="ic"><i class="fas fa-rotate-left"></i></span><span data-en="Lost Item Refund">Refund Item Hilang</span></h3><p data-en="Refund of items lost due to a bug or server rollback. See the full requirements in the <a href='#refund'>Refund</a> section.">Pengembalian item yang hilang akibat bug atau rollback server. Lihat syarat lengkap di bagian <a href="#refund">Refund</a>.</p></div>
+    <div class="card g"><h3><span class="ic"><i class="fas fa-key"></i></span><span data-en="Account Help">Bantuan Akun</span></h3><p data-en="Problems related to your player account on the server.">Masalah terkait akun pemain di server.</p><ul>
+      <li data-en="Forgot account password">Lupa password akun</li><li data-en="Account locked or banned unfairly">Akun terkunci atau dibanned secara tidak adil</li><li data-en="Username change that caused data loss">Ganti username yang menyebabkan data hilang</li><li data-en="Trouble registering or logging in">Kesulitan registrasi atau login</li></ul></div>
+    <div class="card g"><h3><span class="ic"><i class="fas fa-gavel"></i></span><span data-en="Unban &amp; Punishment Appeal">Unban &amp; Banding Hukuman</span></h3><p data-en="If you feel you were punished unfairly.">Jika kamu merasa dihukum tidak adil.</p><ul>
+      <li data-en="Unban request if you were punished without valid grounds">Permintaan unban jika dihukum secara tidak sah</li><li data-en="Appeals for punishments such as mute, kick, or jail">Banding hukuman seperti mute, kick, atau jail</li><li data-en="Review of staff team decisions">Peninjauan ulang keputusan tim staff</li></ul></div>
+    <div class="card g"><h3><span class="ic"><i class="fas fa-credit-card"></i></span><span data-en="Purchase &amp; Donation Help">Pembelian &amp; Donasi</span></h3><p data-en="Help with in-server transactions.">Bantuan terkait transaksi dalam server.</p><ul>
+      <li data-en="Problems buying a rank or premium items">Masalah pembelian rank atau item premium</li><li data-en="Did not receive items after a transaction">Tidak menerima item setelah transaksi</li><li data-en="Payment confirmation and donation status">Konfirmasi pembayaran dan status donasi</li></ul></div>
+    <div class="card g"><h3><span class="ic"><i class="fas fa-circle-question"></i></span><span data-en="General Questions">Pertanyaan Umum</span></h3><p data-en="Questions or guidance about the server.">Pertanyaan atau panduan seputar server.</p><ul>
+      <li data-en="How to play and understand server mechanics">Cara bermain dan memahami mekanik server</li><li data-en="Information about server features or events">Informasi fitur atau event server</li><li data-en="Understanding the rules and policies">Memahami aturan dan kebijakan</li></ul></div>
+  </div>
+</section>
+
+<section id="refund">
+  <div class="hd"><h2 data-en="Lost Item Refund Policy">Kebijakan Refund Item Hilang</h2><p data-en="Refunds are only for items lost due to a bug or server rollback.">Refund hanya untuk item yang hilang akibat bug atau rollback server.</p></div>
+  <div class="time"><i class="fas fa-clock"></i><p data-en="Refund reports must be made within <b>24 hours</b> of the incident. After that, the report cannot be processed.">Laporan refund maksimal <b>24 jam</b> setelah kejadian. Lewat dari itu, laporan tidak dapat diproses.</p></div>
+  <div class="refund">
+    <div class="card g ok"><h3 data-en="Refund Requirements">Syarat Refund</h3><ul>
+      <li data-en="Item lost due to a bug, not your own mistake">Item hilang karena bug, bukan karena kesalahan sendiri</li><li data-en="Proof of item ownership">Ada bukti kepemilikan item</li><li data-en="Reported within 24 hours of the incident">Dilaporkan maksimal 24 jam setelah kejadian</li></ul></div>
+    <div class="card g no"><h3 data-en="Refund Does Not Apply To">Refund Tidak Berlaku Untuk</h3><ul>
+      <li data-en="Loss from dying in-game (for example, falling into lava)">Kehilangan akibat kematian di game (misalnya jatuh ke lava)</li><li data-en="Loss from scamming or theft (unless there is strong proof)">Kehilangan karena scamming atau pencurian (kecuali ada bukti kuat)</li><li data-en="Items lost through your own mistake, such as accidentally dropping them">Item hilang akibat kesalahan sendiri, seperti drop tanpa sengaja</li></ul></div>
+  </div>
+</section>
+
+<section id="proses">
+  <div class="hd"><h2 data-en="Report Handling Process">Proses Penanganan Laporan</h2><p data-en="From opening a ticket to the final decision.">Dari tiket dibuka sampai keputusan akhir.</p></div>
+  <div class="steps">
+    <div class="card"><h3 data-en="Report Received">Laporan Masuk</h3><p data-en="You open a ticket in the Discord Support Center.">Kamu membuka tiket di Support Center Discord.</p></div>
+    <div class="card"><h3 data-en="Initial Verification">Verifikasi Awal</h3><p data-en="The support team reviews the report and checks that the details are complete.">Tim support meninjau laporan dan memastikan data lengkap.</p></div>
+    <div class="card"><h3 data-en="Investigation">Investigasi</h3><p data-en="The team investigates based on the proof you provided.">Tim menyelidiki berdasarkan bukti yang kamu berikan.</p></div>
+    <div class="card"><h3 data-en="Decision">Keputusan</h3><p data-en="Once the analysis is done, the support team responds.">Setelah analisis selesai, tim support memberikan respons.</p></div>
+    <div class="card"><h3 data-en="Resolution">Penyelesaian</h3><p data-en="The final result is communicated through Discord.">Hasil akhir diinformasikan melalui Discord.</p></div>
+  </div>
+  <div class="out">
+    <span class="o"><b style="color:#2ee59d">&#10003;</b><span data-en="Approved: action is taken per server policy">Disetujui: tindakan diambil sesuai kebijakan server</span></span>
+    <span class="o"><b style="color:var(--pink)">&#10007;</b><span data-en="Rejected: evidence is lacking or invalid">Ditolak: bukti kurang atau tidak valid</span></span>
+    <span class="o"><b style="color:var(--or)">?</b><span data-en="More Info Needed: you will be asked for details">Perlu Tambahan Info: kamu akan diminta info lebih lanjut</span></span>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="hd"><h2 data-en="Frequently Asked Questions">Pertanyaan Umum</h2></div>
+  <div class="faq">
+    <details><summary><span data-en="How do I join the server?">Bagaimana cara masuk ke server?</span></summary><p data-en="Use Minecraft Java Edition version <b>1.20.1</b>, then add the server with the IP <code data-ip></code>. Bedrock Edition is not supported. A full guide is on the <a href='index.html#cara-main'>home page</a>.">Pakai Minecraft Java versi <b>1.20.1</b>, lalu tambahkan server dengan IP <code data-ip></code>. Edisi Bedrock tidak didukung. Panduan lengkap ada di <a href='index.html#cara-main'>halaman utama</a>.</p></details>
+    <details><summary><span data-en="I can't connect to the server">Saya tidak bisa terhubung ke server</span></summary><p data-en="First check the <a href='status.2027.html'>server status</a>, then make sure your game version is 1.20.1 and the IP is correct. If the server is online but you still can't connect, send a screenshot of the error message on Discord.">Cek dulu <a href='status.2027.html'>status server</a>, lalu pastikan versi game 1.20.1 dan IP sudah benar. Kalau server online tapi tetap gagal, kirim screenshot pesan error ke Discord.</p></details>
+    <details><summary><span data-en="How do I buy a rank or gems?">Bagaimana cara membeli rank atau gems?</span></summary><p data-en="Open the <a href='shop.2027.html'>Shop</a> page, choose the product you want, then follow the payment steps.">Buka halaman <a href='shop.2027.html'>Toko</a>, pilih produk yang kamu mau, lalu ikuti langkah pembayarannya.</p></details>
+    <details><summary><span data-en="My rank or gems haven't arrived after payment">Rank atau gems belum masuk setelah bayar</span></summary><p data-en="Send your Minecraft username, the product you bought, and proof of payment through Discord or email. Our team will check it.">Kirim username Minecraft, produk yang dibeli, dan bukti pembayaran lewat Discord atau email. Tim kami akan memeriksanya.</p></details>
+    <details><summary><span data-en="How do I report a cheater or bug?">Bagaimana melaporkan pemain curang atau bug?</span></summary><p data-en="Open a ticket on Discord and send the offender's username (or a description of the bug), the time it happened, and a screenshot or video as proof.">Buka tiket di Discord dan kirim username pelaku (atau deskripsi bug), waktu kejadian, dan screenshot atau video sebagai bukti.</p></details>
+    <details><summary><span data-en="My items were lost. Can I get a refund?">Item saya hilang. Bisa direfund?</span></summary><p data-en="Yes, if they were lost due to a bug or server rollback, you have proof of ownership, and you report it within 24 hours of the incident. See the <a href='#refund'>refund policy</a> for details.">Bisa, jika hilang karena bug atau rollback server, ada bukti kepemilikan, dan dilaporkan maksimal 24 jam setelah kejadian. Lihat <a href='#refund'>kebijakan refund</a> untuk detailnya.</p></details>
+    <details><summary><span data-en="What are the purchase terms?">Apa ketentuan pembelian?</span></summary><p data-en="The full terms are on the <a href='ToS.2027.html'>Terms of Service</a> page. If there is a problem with your purchase, contact us first.">Ketentuan lengkap ada di halaman <a href='ToS.2027.html'>Syarat Layanan</a>. Kalau ada masalah dengan pembelianmu, hubungi kami lebih dulu.</p></details>
+  </div>
+  <div class="more">
+    <p data-en="Didn't find your answer?">Belum menemukan jawabannya?</p>
+    <div class="chips">
+      <a href="https://discord.gg/JYS6N85TjE" class="btn gold sm" target="_blank" rel="noopener"><i class="fab fa-discord"></i><span data-en="Ask on Discord">Tanya di Discord</span></a>
+      <a href="ToS.2027.html" class="btn ghost sm"><i class="fas fa-file-lines"></i><span data-en="Terms of Service">Syarat Layanan</span></a>
+      <a href="shop.2027.html" class="btn ghost sm"><i class="fas fa-store"></i><span data-en="Shop">Toko</span></a>
+      <a href="team.2027.html" class="btn ghost sm"><i class="fas fa-users"></i><span data-en="Team">Tim</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fc">
+    <div><h3>ICIKI NETWORK</h3><p data-en="A multiplayer Minecraft survival adventure with custom features, events, and an amazing community.">Petualangan Minecraft survival multiplayer dengan fitur kustom, event, dan komunitas yang luar biasa.</p>
+      <div class="soc"><a href="https://discord.gg/JYS6N85TjE" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+    <div><h3 data-en="Quick Links">Tautan Cepat</h3><ul>
+      <li><a href="index.html"><i class="fas fa-home"></i><span data-en="Home">Beranda</span></a></li>
+      <li><a href="shop.2027.html"><i class="fas fa-store"></i><span data-en="Shop">Toko</span></a></li>
+      <li><button type="button" class="lk" id="openDiscord"><i class="fas fa-users"></i><span data-en="Community">Komunitas</span></button></li>
+      <li><a href="help.2027.html"><i class="fas fa-circle-question"></i><span data-en="Help">Bantuan</span></a></li>
+    </ul></div>
+    <div><h3 data-en="Support">Dukungan</h3><ul>
+      <li><a href="help.2027.html"><i class="fas fa-headset"></i><span data-en="Contact Us">Hubungi Kami</span></a></li>
+      <li><a href="ToS.2027.html"><i class="fas fa-file-lines"></i><span data-en="Terms of Service">Syarat Layanan</span></a></li>
+      <li><a href="help.2027.html"><i class="fas fa-shield-halved"></i><span data-en="Privacy Policy">Kebijakan Privasi</span></a></li>
+      <li><a href="help.2027.html"><i class="fas fa-rotate-left"></i><span data-en="Refund Policy">Kebijakan Pengembalian</span></a></li>
+    </ul></div>
+  </div>
+  <div class="fb">&copy; <span id="yr"></span> ICIKI NETWORK. All rights reserved.</div>
+</footer>
+
+<!-- DISCORD POPUP -->
+<div class="modal" id="dmodal" role="dialog" aria-modal="true" aria-labelledby="dtitle">
+  <div class="mbox">
+    <button type="button" class="mx" id="closeDiscord" aria-label="Close"><i class="fas fa-xmark"></i></button>
+    <div class="ic"><i class="fab fa-discord"></i></div>
+    <h3 id="dtitle" data-en="JOIN OUR DISCORD">GABUNG DISCORD</h3>
+    <p data-en="Chat with other players, join events, and get help from our team in the ICIKI NETWORK Discord community.">Ngobrol dengan pemain lain, ikut event, dan dapatkan bantuan dari tim kami di komunitas Discord ICIKI NETWORK.</p>
+    <a href="https://discord.gg/JYS6N85TjE" class="btn gold" id="joinDiscord" target="_blank" rel="noopener"><i class="fab fa-discord"></i><span data-en="Join Server">Gabung Server</span></a>
+  </div>
+</div>
+
+<script>
+// ===== Konfigurasi: ubah IP dan email di sini =====
+const CFG={ip:'play.iciki.net:25565',email:'support@iciki.net'};
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const root=document.documentElement;
+
+// nav
+const nav=$('#nav'),links=$('#links'),burger=$('#burger');
+addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>40),{passive:true});
+burger.onclick=()=>burger.setAttribute('aria-expanded',links.classList.toggle('open'));
+const closeMenu=()=>{links.classList.remove('open');burger.setAttribute('aria-expanded','false')};
+links.addEventListener('click',closeMenu);
+document.addEventListener('click',e=>{if(!nav.contains(e.target))closeMenu()});
+addEventListener('resize',()=>{if(innerWidth>1100)closeMenu()});
+
+// discord popup
+const dm=$('#dmodal'),openBtn=$('#openDiscord');
+function openDiscord(){dm.classList.add('open');root.classList.add('modal-open');$('#joinDiscord').focus()}
+function closeDiscord(){if(!dm.classList.contains('open'))return;dm.classList.remove('open');root.classList.remove('modal-open');openBtn.focus()}
+openBtn.onclick=openDiscord;
+$('#closeDiscord').onclick=closeDiscord;
+dm.addEventListener('click',e=>{if(e.target===dm)closeDiscord()});
+$('#joinDiscord').addEventListener('click',()=>setTimeout(closeDiscord,300));
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();closeDiscord()}});
+
+// bahasa / language (ID / EN) — memakai pilihan yang sama dengan halaman utama
+const T=$$('[data-en]');T.forEach(e=>e.dataset.id=e.innerHTML);
+let lang='id';try{if(localStorage.getItem('lang')==='en')lang='en'}catch(e){}
+function fill(){
+  $$('[data-ip]').forEach(e=>e.textContent=CFG.ip);
+  $$('[data-mail]').forEach(e=>e.tagName==='A'?e.href='mailto:'+CFG.email:e.textContent=CFG.email);
+  $('#yr').textContent=new Date().getFullYear();
+}
+function setLang(l){
+  lang=l;document.documentElement.lang=l;
+  T.forEach(e=>e.innerHTML=l==='en'?e.dataset.en:e.dataset.id);
+  fill();
+  $$('.lang button').forEach(b=>{const on=b.dataset.l===l;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
+  document.title='ICIKI NETWORK | '+(l==='en'?'Support':'Bantuan');
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+$$('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+setLang(lang);
+</script>
+</body>
+</html>

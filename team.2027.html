@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#150B2D">
+<meta name="description" content="Kenali tim di balik ICIKI NETWORK: owner, developer, admin, staff, dan helper.">
+<title>ICIKI NETWORK | Tim</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#150B2D;--wine:#581018;--red:#BE1522;--or:#F19A0C;--em:#E3592F;--gold:#FAF180;--pink:#FF0066;--pur:#8A35C7;--tx:#f6f0ff;--mut:#b9abd6;--card:rgba(36,18,70,.6);--bd:rgba(250,241,128,.14);--grad:linear-gradient(120deg,var(--gold),var(--or) 50%,var(--pink))}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+body{font-family:'Chakra Petch','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 0,rgba(190,21,34,.5),transparent 70%),radial-gradient(40% 40% at 95% 55%,rgba(138,53,199,.3),transparent 70%),radial-gradient(45% 40% at 0 85%,rgba(88,16,24,.8),transparent 70%)}
+#fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:3000}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* nav */
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(1240px,94%);z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px 9px 18px;border-radius:999px;background:rgba(21,11,45,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--bd);transition:background .3s,box-shadow .3s}
+nav.sc{background:rgba(21,11,45,.94);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:.78rem 'Press Start 2P',monospace;color:var(--gold)}
+.brand img{height:44px;border-radius:8px;display:block}
+.links{display:flex;gap:2px}
+.links a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:99px;font-weight:500;font-size:.95rem;transition:.2s}
+.links a:hover,.links a.cur{color:var(--gold);background:rgba(255,255,255,.07)}
+.acts{display:flex;gap:8px;align-items:center}
+#burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:rgba(255,255,255,.06);color:var(--tx);font-size:1.1rem;cursor:pointer}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 28px;border-radius:99px;border:0;font:600 1rem 'Chakra Petch',sans-serif;cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--red),var(--pink));box-shadow:0 6px 24px rgba(255,0,102,.35);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(255,0,102,.55)}
+.gold{background:linear-gradient(135deg,var(--gold),var(--or));color:#2b1000;box-shadow:0 6px 24px rgba(241,154,12,.35)}
+.gold:hover{box-shadow:0 10px 32px rgba(241,154,12,.6)}
+.ghost{background:rgba(255,255,255,.07);border:1px solid var(--bd);box-shadow:none}
+.sm{padding:9px 18px;font-size:.88rem}
+.lang{display:flex;padding:3px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid var(--bd)}
+.lang button{border:0;background:none;color:var(--mut);font:600 .8rem 'Chakra Petch',sans-serif;padding:6px 11px;border-radius:99px;cursor:pointer;transition:.2s}
+.lang button.on{background:var(--gold);color:var(--wine)}
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 5% 70px}
+h1{font:clamp(2rem,8.5vw,5.6rem)/1.2 'Press Start 2P',monospace;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 0 var(--wine)) drop-shadow(0 0 40px rgba(190,21,34,.7));animation:drop .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes drop{from{opacity:0;transform:translateY(-40px) scale(.96)}}
+.hero p{max-width:620px;margin:26px auto 0;font-size:1.15rem;color:var(--mut);animation:drop .9s .15s both}
+/* sections */
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:30px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.soc{display:flex;justify-content:center;gap:10px;margin-top:20px}
+.soc a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:var(--tx);text-decoration:none;transition:.25s}
+.soc a:hover{background:var(--pink);transform:translateY(-3px)}
+#toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,30px);opacity:0;pointer-events:none;padding:12px 24px;border-radius:99px;background:var(--gold);color:var(--wine);font-weight:700;z-index:4000;transition:.35s}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+/* footer */
+footer{margin-top:90px;padding:50px 5% 24px;background:rgba(21,11,45,.85);border-top:1px solid var(--bd)}
+.fc{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
+footer h3{color:var(--or);margin-bottom:16px}
+footer p,footer li a,footer li .lk{color:var(--mut)}
+footer ul{list-style:none}
+footer li{margin-bottom:10px}
+footer li a{text-decoration:none;transition:.2s}
+footer li a:hover,footer li .lk:hover{color:var(--gold)}
+.lk{background:none;border:0;padding:0;font:inherit;cursor:pointer;text-align:left;transition:.2s}
+footer li i{width:22px;color:var(--em)}
+.fb{max-width:1200px;margin:34px auto 0;padding-top:22px;border-top:1px solid var(--bd);text-align:center;color:var(--mut);font-size:.9rem}
+@media(max-width:1100px){
+nav{top:max(10px,env(safe-area-inset-top))}
+.links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;gap:4px;padding:12px;border-radius:24px;background:rgba(21,11,45,.97);border:1px solid var(--bd);max-height:calc(100svh - 100px);overflow-y:auto}
+.links.open{display:flex}
+.links a{padding:14px 18px;font-size:1.05rem;min-height:48px;display:flex;align-items:center}
+#burger{display:block}
+.lang button{padding:9px 13px;min-height:36px}
+}
+/* discord popup */
+html.modal-open body{overflow:hidden}
+.modal{display:none;position:fixed;inset:0;z-index:4000;place-items:center;padding:20px;background:rgba(10,5,24,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.modal.open{display:grid;animation:fade .25s both}
+@keyframes fade{from{opacity:0}}
+.mbox{position:relative;width:min(420px,100%);padding:36px 28px 28px;border-radius:24px;text-align:center;background:linear-gradient(160deg,rgba(88,16,24,.95),rgba(36,18,70,.96));border:1px solid rgba(250,241,128,.45);box-shadow:0 24px 70px rgba(0,0,0,.6);animation:pop .35s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.94)}}
+.mic{margin:0 auto 16px;width:68px;height:68px;border-radius:18px;display:grid;place-items:center;font-size:1.9rem;color:#fff;background:linear-gradient(135deg,#5865F2,#7983f5);box-shadow:0 8px 22px rgba(88,101,242,.45)}
+.mbox h3{font:1rem/1.4 'Press Start 2P',monospace;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+.mbox p{color:var(--mut);margin-bottom:22px}
+.mbox .btn{width:100%;justify-content:center}
+.mx{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:1px solid var(--bd);background:rgba(255,255,255,.08);color:var(--tx);font-size:1rem;cursor:pointer}
+.mx:hover{background:var(--pink)}
+@media(max-width:860px){
+.fc{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+.acts .btn span{display:none}
+.acts .btn{padding:10px 14px;min-width:42px;min-height:42px;justify-content:center}
+nav{padding:7px 8px 7px 12px;gap:6px}
+.brand img{height:38px}
+.acts{gap:6px}
+.hero p{font-size:1.02rem}
+.soc a{width:44px;height:44px}
+footer{padding:40px 5% calc(24px + env(safe-area-inset-bottom));margin-top:50px}
+footer li a,footer li .lk{display:inline-block;padding:4px 0}
+#toast{width:max-content;max-width:90vw;text-align:center;bottom:calc(20px + env(safe-area-inset-bottom))}
+}
+@media(max-width:400px){
+.brand img{height:34px}
+.lang button{padding:8px 10px}
+}
+@media(hover:none){
+.btn:hover,.soc a:hover,.sl a:hover,.sl button:hover{transform:none}
+.pc:hover .pl img{transform:none}
+}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+.hero.sm{min-height:auto;padding:150px 5% 30px}
+.hero.sm h1{font-size:clamp(1.1rem,5.2vw,3.4rem)}
+.tiers{max-width:1140px;margin:0 auto;padding:50px 5% 30px}
+.lv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px;margin:0 auto 96px}
+.lv.one{grid-template-columns:minmax(0,1fr)}
+.lv:nth-child(1){--h:250px;--pw:250px}.lv:nth-child(2){--h:210px;--pw:220px}.lv:nth-child(3){--h:180px;--pw:200px}.lv:nth-child(n+4){--h:160px;--pw:180px}
+.rb{--t:var(--pur);position:relative;padding:62px 22px 34px;border-radius:30px;text-align:center;background:radial-gradient(70% 55% at 50% 0,color-mix(in srgb,var(--t) 24%,transparent),transparent 78%),rgba(26,13,54,.74);border:1px solid color-mix(in srgb,var(--t) 30%,transparent);box-shadow:0 26px 60px rgba(0,0,0,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.rb::before{content:'';position:absolute;top:-1px;left:14%;right:14%;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,var(--t),transparent)}
+.nd{position:absolute;top:-34px;left:50%;width:62px;height:62px;margin-left:-31px;border-radius:18px;transform:rotate(45deg);display:grid;place-items:center;background:var(--t);color:var(--tc);border:4px solid var(--bg);box-shadow:0 0 0 3px color-mix(in srgb,var(--t) 45%,transparent),0 0 36px color-mix(in srgb,var(--t) 60%,transparent)}
+.nd i{transform:rotate(-45deg);font-size:1.4rem}
+.rb h2{font-size:1.7rem;line-height:1.2}
+.rd{color:var(--mut);margin:6px auto 30px;max-width:420px;font-size:.95rem}
+.mg{display:flex;flex-wrap:wrap;justify-content:center;gap:40px 34px}
+.pc{width:var(--pw);max-width:100%;display:flex;flex-direction:column;align-items:center}
+.pl{position:relative;width:100%;height:var(--h);display:flex;align-items:flex-end;justify-content:center}
+.pl::before{content:'';position:absolute;inset:4% 6% 0;background:radial-gradient(50% 58% at 50% 55%,color-mix(in srgb,var(--t) 40%,transparent),transparent 72%)}
+.pl::after{content:'';position:absolute;bottom:-9px;left:10%;right:10%;height:22px;border-radius:50%;background:radial-gradient(closest-side,color-mix(in srgb,var(--t) 85%,transparent),transparent)}
+.pl img{position:relative;z-index:1;height:100%;width:auto;image-rendering:pixelated;filter:drop-shadow(0 14px 14px rgba(0,0,0,.55));transition:transform .35s}
+.pl>i{position:relative;z-index:1;align-self:center;font-size:calc(var(--h)*.45);color:var(--t);opacity:.7}
+.pc:hover .pl img{transform:translateY(-8px) scale(1.04)}
+.nm{position:relative;margin-top:26px;padding:7px 22px;border-radius:12px;background:rgba(0,0,0,.5);border:1px solid color-mix(in srgb,var(--t) 60%,transparent);box-shadow:0 0 22px color-mix(in srgb,var(--t) 25%,transparent);font-weight:700;font-size:1.05rem;word-break:break-word}
+.sb{color:var(--t);font-weight:600;font-size:.9rem;margin-top:8px}
+.pc p{color:var(--mut);font-size:.88rem;margin-top:8px}
+.sl{display:flex;justify-content:center;gap:8px;margin-top:14px}
+.sl a,.sl button,.sl span{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;border:0;background:rgba(255,255,255,.09);color:var(--tx);text-decoration:none;cursor:pointer;transition:.25s}
+.sl a:hover,.sl button:hover{background:var(--t);color:var(--tc);transform:translateY(-3px)}
+.sl .off{opacity:.22;cursor:default}
+@media(max-width:760px){.lv{grid-template-columns:minmax(0,1fr);margin-bottom:84px}.tiers{padding-top:30px}}
+@media(max-width:560px){
+.tiers{padding:34px 4% 10px}
+.lv{gap:64px;margin-bottom:64px}
+.lv:nth-child(1){--h:210px;--pw:220px}.lv:nth-child(2){--h:180px;--pw:200px}.lv:nth-child(n+3){--h:150px;--pw:170px}
+.rb{padding:56px 14px 28px;border-radius:24px}
+.rb h2{font-size:1.4rem}
+.mg{gap:36px 18px}
+.sl{gap:10px}
+.sl a,.sl button,.sl span{width:44px;height:44px}
+}
+.tcta2{max-width:900px;margin:0 auto;text-align:center;padding:30px 5% 0}
+.tcta2 h2{font-size:clamp(1.6rem,3.5vw,2.3rem)}
+@media(max-width:560px){.tcta2 .btn{width:100%;justify-content:center}}
+@media(pointer:coarse){.lang button{padding:9px 14px}.btn.sm{padding:11px 18px}}
+@supports not (color:color-mix(in srgb,red 50%,blue)){
+.rb{background:rgba(26,13,54,.8);border-color:var(--bd)}
+.nd{box-shadow:0 0 0 3px var(--t)}
+.pl::before{background:radial-gradient(50% 58% at 50% 55%,rgba(255,255,255,.12),transparent 72%)}
+.pl::after{background:radial-gradient(closest-side,var(--t),transparent)}
+.nm{border-color:var(--t);box-shadow:none}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<canvas id="fx"></canvas>
+
+<nav id="nav">
+  <a class="brand" href="index.html"><img src="logo.png" alt="Logo ICIKI NETWORK" onerror="this.style.display='none'"></a>
+  <div class="links" id="links"><a href="index.html">Beranda</a><a href="shop.2027.html">Toko</a><a class="cur" href="team.2027.html" aria-current="page">Tim</a><a href="status.2027.html">Status</a><a href="help.2027.html">Bantuan</a><a href="rules.2027.html">Aturan</a><a href="ToS.2027.html">ToS</a></div>
+  <div class="acts">
+    <div class="lang" role="group" aria-label="Language"><button data-l="id" class="on" aria-pressed="true">ID</button><button data-l="en" aria-pressed="false">EN</button></div>
+    <a href="https://minecraft-mp.com/server/346397/vote/" class="btn gold sm" target="_blank" rel="noopener" aria-label="Vote"><i class="fas fa-vote-yea"></i><span>Vote</span></a>
+    <a href="https://discord.gg/JYS6N85TjE" class="btn sm" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i><span>Discord</span></a>
+    <button id="burger" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="hero sm">
+  <h1>ICIKI NETWORK<br>TEAM</h1>
+  <p>Kenali orang-orang di balik ICIKI NETWORK, dari pemimpin sampai helper yang siap membantumu.</p>
+</header>
+
+<main class="tiers" id="tiers"></main>
+
+<div class="tcta2">
+  <h2>Butuh Bantuan?</h2>
+  <p style="color:var(--mut);margin:8px 0 24px">Hubungi tim kami lewat Discord, kami siap membantu.</p>
+  <a class="btn" href="https://discord.gg/JYS6N85TjE" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Gabung Discord</a>
+</div>
+<div id="toast" role="status"></div>
+
+<footer>
+  <div class="fc">
+    <div><h3>ICIKI NETWORK</h3><p>Petualangan Minecraft survival multiplayer dengan fitur kustom, event, dan komunitas yang luar biasa.</p>
+      <div class="soc" style="justify-content:flex-start"><a href="https://discord.gg/JYS6N85TjE" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a><a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+    <div><h3>Tautan Cepat</h3><ul><li><a href="index.html"><i class="fas fa-home"></i>Beranda</a></li><li><a href="shop.2027.html"><i class="fas fa-store"></i>Toko</a></li><li><button type="button" class="lk" id="openDiscord"><i class="fas fa-users"></i>Komunitas</button></li><li><a href="help.2027.html"><i class="fas fa-circle-question"></i>Bantuan</a></li></ul></div>
+    <div><h3>Dukungan</h3><ul><li><a href="help.2027.html"><i class="fas fa-headset"></i>Hubungi Kami</a></li><li><a href="ToS.2027.html"><i class="fas fa-file-lines"></i>Syarat Layanan</a></li><li><a href="help.2027.html"><i class="fas fa-shield-halved"></i>Kebijakan Privasi</a></li><li><a href="help.2027.html"><i class="fas fa-rotate-left"></i>Kebijakan Pengembalian</a></li></ul></div>
+  </div>
+  <div class="fb">&copy; <span id="yr"></span> ICIKI NETWORK. All rights reserved.</div>
+</footer>
+
+<!-- DISCORD POPUP -->
+<div class="modal" id="dmodal" role="dialog" aria-modal="true" aria-labelledby="dtitle">
+  <div class="mbox">
+    <button type="button" class="mx" id="closeDiscord" aria-label="Close"><i class="fas fa-xmark"></i></button>
+    <div class="mic"><i class="fab fa-discord"></i></div>
+    <h3 id="dtitle">GABUNG DISCORD</h3>
+    <p>Ngobrol dengan pemain lain, ikut event, dan dapatkan bantuan dari tim kami di komunitas Discord ICIKI NETWORK.</p>
+    <a href="https://discord.gg/JYS6N85TjE" class="btn gold" id="joinDiscord" target="_blank" rel="noopener"><i class="fab fa-discord"></i><span>Gabung Server</span></a>
+  </div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+$('#yr').textContent=new Date().getFullYear();
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),2200)}
+
+
+// ===== Data tim: GANTI nama, deskripsi, dan sosial media =====
+// s.d = username Discord (diklik = disalin), s.t = username TikTok, s.i = username Instagram (tanpa @). Kosong = ikon redup.
+const TEAM=[
+ {r:'owner',n:'Aro_iciki',d:['Pendiri dan pengembang utama ICIKI NETWORK. Bersemangat menciptakan pengalaman Minecraft terbaik.','Founder and lead developer of ICIKI NETWORK. Passionate about creating the best Minecraft experience.'],s:{d:'',t:'',i:''}},
+ {r:'co',n:'Senagaming2510_3',sub:'Owner Discord GMC',d:['Pendiri dan pengembang utama Server GMC. Bersemangat menciptakan pengalaman Server Discord terbaik.','Founder and lead developer of the GMC server. Passionate about creating the best Discord server experience.'],s:{d:'',t:'',i:''}},
+ {r:'host',n:'aliffiamc',sub:'Founder Lifzzz pediaa',d:['Pendiri dan pengembang utama Hosting Lifzzz pediaa. Bersemangat menciptakan hosting terbaik untuk ICIKI NETWORK.','Founder and lead developer of Lifzzz pediaa Hosting. Passionate about building the best hosting for ICIKI NETWORK.'],s:{d:'',t:'',i:''}},
+ {r:'dev',n:'Archillezz',s:{d:'',t:'',i:''}},
+ {r:'adm',n:'_qonita23',s:{d:'',t:'',i:''}},
+ {r:'stf',n:'ghaizant',s:{d:'',t:'',i:''}},
+ {r:'stf',n:'carllito_jesse',s:{d:'',t:'',i:''}},
+ {r:'hlp',n:'Hasan_TheAviator',s:{d:'',t:'',i:''}},
+ {r:'hlp',n:'Khaleef_TheAviator',s:{d:'',t:'',i:''}}
+];
+const RL={
+ owner:{n:['Owner','Owner'],c:'#FAF180',dk:1,ic:'crown',d:['Pemimpin tertinggi ICIKI NETWORK.','The top leader of ICIKI NETWORK.']},
+ co:{n:['Co-owner','Co-owner'],c:'#F19A0C',dk:1,ic:'gem',d:['Mendampingi owner mengelola network.','Works alongside the owner to run the network.']},
+ host:{n:['Hosting / Toko','Hosting / Store Provider'],c:'#E3592F',ic:'server',d:['Penyedia hosting dan toko untuk ICIKI NETWORK.','Hosting and store provider for ICIKI NETWORK.']},
+ dev:{n:['Developer','Developer'],c:'#BE1522',ic:'code',d:['Membangun fitur dan menjaga server tetap berjalan.','Building features and keeping the server running.']},
+ adm:{n:['Admin','Admin'],c:'#FF0066',ic:'user-shield',d:['Mengelola server dan komunitas.','Managing the server and the community.']},
+ hlp:{n:['Helper','Helper'],c:'#b9abd6',dk:1,ic:'handshake-angle',d:['Siap membantu pemain, terutama yang baru.','Ready to help players, especially new ones.']},
+ stf:{n:['Staff','Staff'],c:'#8A35C7',ic:'users',d:['Menjaga server tetap aman dan tertib.','Keeping the server safe and orderly.']}
+};
+// Susunan baris dari atas ke bawah (maks. 2 role per baris). Ubah di sini untuk menukar posisi.
+const ROWS=[['owner','co'],['host','dev'],['adm','hlp'],['stf']];
+const SC=[['d','discord'],['t','tiktok'],['i','instagram']];
+let lang='id';
+try{if(localStorage.getItem('lang')==='en')lang='en'}catch(e){}
+function soc(m){
+  const s=m.s||{};
+  return '<div class="sl">'+SC.map(([k,ic])=>{
+    const v=(s[k]||'').replace(/^@/,''),i=`<i class="fab fa-${ic}"></i>`,nm=ic[0].toUpperCase()+ic.slice(1);
+    if(!v)return `<span class="off" title="${nm}">${i}</span>`;
+    if(k==='d')return `<button data-dc="${v}" title="Discord: ${v}" aria-label="Discord">${i}</button>`;
+    return `<a href="https://${k==='t'?'www.tiktok.com/@':'www.instagram.com/'}${encodeURIComponent(v)}" target="_blank" rel="noopener" title="${nm}" aria-label="${nm}">${i}</a>`;
+  }).join('')+'</div>';
+}
+function card(m,l){
+  return `<article class="pc"><div class="pl"><img src="https://mc-heads.net/body/${encodeURIComponent(m.n)}/200" alt="${m.n}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('i'),{className:'fas fa-user'}))"></div><div class="nm">${m.n}</div>${m.sub?`<div class="sb">${m.sub}</div>`:''}${m.d?`<p>${m.d[l]}</p>`:''}${soc(m)}</article>`;
+}
+function panel(k,l){
+  const R=RL[k];
+  return `<div class="rb" style="--t:${R.c};--tc:${R.dk?'#2b1000':'#fff'}"><div class="nd"><i class="fas fa-${R.ic}"></i></div><h2>${R.n[l]}</h2><p class="rd">${R.d[l]}</p><div class="mg">${TEAM.filter(m=>m.r===k).map(m=>card(m,l)).join('')}</div></div>`;
+}
+function renderTeam(){
+  const l=+(lang==='en');
+  $('#tiers').innerHTML=ROWS.map(row=>{
+    const ks=row.filter(k=>TEAM.some(m=>m.r===k));
+    if(!ks.length)return '';
+    return `<div class="lv${ks.length===1?' one':''}">${ks.map(k=>panel(k,l)).join('')}</div>`;
+  }).join('');
+}
+$('#tiers').addEventListener('click',e=>{
+  const b=e.target.closest('[data-dc]');if(!b)return;
+  const v=b.dataset.dc,msg=(lang==='en'?'Discord copied: ':'Discord disalin: ')+v;
+  (navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).then(()=>toast(msg)).catch(()=>toast(v));
+});
+
+// nav + progress
+const nav=$('#nav'),bar=$('#bar'),links=$('#links'),burger=$('#burger');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('sc',scrollY>40);
+  bar.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100||0)+'%';
+},{passive:true});
+burger.onclick=()=>burger.setAttribute('aria-expanded',links.classList.toggle('open'));
+const closeMenu=()=>{links.classList.remove('open');burger.setAttribute('aria-expanded','false')};
+links.addEventListener('click',closeMenu);
+document.addEventListener('click',e=>{if(!nav.contains(e.target))closeMenu()});
+addEventListener('resize',()=>{if(innerWidth>1100)closeMenu()});
+
+// discord popup
+const dm=$('#dmodal'),openBtn=$('#openDiscord'),root=document.documentElement;
+function openDiscord(){dm.classList.add('open');root.classList.add('modal-open');$('#joinDiscord').focus()}
+function closeDiscord(){if(!dm.classList.contains('open'))return;dm.classList.remove('open');root.classList.remove('modal-open');openBtn.focus()}
+openBtn.onclick=openDiscord;
+$('#closeDiscord').onclick=closeDiscord;
+dm.addEventListener('click',e=>{if(e.target===dm)closeDiscord()});
+$('#joinDiscord').addEventListener('click',()=>setTimeout(closeDiscord,300));
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();closeDiscord()}});
+
+
+const EN={'Fitur':'Features','Cara Main':'How to Play','Tim':'Team','Toko':'Shop',
+'Server Minecraft survival dengan fitur kustom, event seru, dan komunitas yang ramah. Satu IP, ratusan teman.':'A Minecraft survival server with custom features, fun events and a friendly community. One IP, hundreds of friends.',
+'Gabung Server':'Join Server','Beli Rank':'Buy Rank','Anggota':'Members','Dunia':'Worlds',
+'Mengapa Memilih ICIKI NETWORK?':'Why Choose ICIKI NETWORK?','Dibangun supaya survival terasa lancar, rapi, dan ramai.':'Built to make survival smooth, polished and lively.',
+'Latensi Rendah':'Low Latency','Server yang dioptimalkan dengan ping rendah, jadi gameplay tetap lancar untuk semua pemain.':'An optimized server with low ping, so gameplay stays smooth for every player.',
+'UI Intuitif':'Intuitive UI','GUI dan navigasi yang mudah dipahami, dari menu server sampai toko dalam game.':'Easy-to-understand GUIs and navigation, from server menus to the in-game shop.',
+'Fitur Kaya':'Rich Features','Item kustom dan berbagai fitur menarik yang membuat petualangan survival-mu lebih seru.':'Custom items and plenty of features that make your survival adventure more fun.',
+'50+ Dunia':'50+ Worlds','Banyak dunia untuk dijelajahi, dibangun, dan dijadikan markas.':'Plenty of worlds to explore, build in and call home.',
+'Komunitas Aktif':'Active Community','Lebih dari 250 anggota yang siap bermain bareng. Temukan mereka di Discord.':'Over 250 members ready to play together. Find them on Discord.',
+'Event Rutin':'Regular Events','Ikuti event dan raih hadiah bersama pemain lain.':'Join events and win prizes alongside other players.',
+'Cara Bergabung':'How to Join','Tiga langkah, kurang dari satu menit.':'Three steps, under a minute.','Buka Minecraft Java':'Open Minecraft Java',
+'Pilih versi':'Choose version',', lalu buka menu Multiplayer.':', then open the Multiplayer menu.','Tambah Server':'Add Server','Klik Add Server dan tempel IP':'Click Add Server and paste the IP',
+'Masuk dan Bermain':'Join and Play','Gabung server, lalu masuk ke Discord untuk info event terbaru.':'Join the server, then hop into Discord for the latest event news.',
+'Status Server':'Server Status','Server Utama Survival':'Main Survival Server','Pemain online':'Players online','Versi':'Version','Edisi':'Edition','Khusus Java':'Java only','Diperbarui':'Updated',
+'Kata Para Pemain':'What Players Say','Pemain yang sudah membeli rank membagikan pengalamannya.':'Players who bought a rank share their experience.','Bagikan Testimoni':'Share a Testimonial',
+'Produk Kami':'Our Products','Dukung server dan dapatkan keuntungan eksklusif.':'Support the server and get exclusive perks.',
+'Buka akses ke fitur eksklusif dan perintah dengan sistem rank premium kami.':'Unlock exclusive features and commands with our premium rank system.',
+'Mulai Rp 10.000':'From Rp 10,000','Lihat Rank':'View Ranks','Gems & Mata Uang':'Gems & Currency',
+'Beli mata uang dalam game untuk membeli item, kosmetik, dan lainnya.':'Buy in-game currency to get items, cosmetics and more.','Mulai Rp 1.000':'From Rp 1,000','Lihat Gems':'View Gems',
+'Siap Memulai Petualanganmu?':'Ready to Start Your Adventure?','Salin IP, masuk ke server, dan bertemu pemain lain hari ini.':'Copy the IP, join the server and meet other players today.',
+'Informasi Server':'Server Information','Salin IP':'Copy IP','Tutup':'Close',
+'Petualangan Minecraft survival multiplayer dengan fitur kustom, event, dan komunitas yang luar biasa.':'A Minecraft survival multiplayer adventure with custom features, events and an amazing community.',
+'Tautan Cepat':'Quick Links','Dukungan':'Support','Beranda':'Home','Komunitas':'Community','Bantuan':'Help','Hubungi Kami':'Contact Us',
+'Syarat Layanan':'Terms of Service','Aturan':'Rules','GABUNG DISCORD':'JOIN OUR DISCORD',
+'Ngobrol dengan pemain lain, ikut event, dan dapatkan bantuan dari tim kami di komunitas Discord ICIKI NETWORK.':'Chat with other players, join events, and get help from our team in the ICIKI NETWORK Discord community.','Kebijakan Privasi':'Privacy Policy','Kebijakan Pengembalian':'Refund Policy','Kenali orang-orang di balik ICIKI NETWORK, dari pemimpin sampai helper yang siap membantumu.':'Meet the people behind ICIKI NETWORK, from our leaders to the helpers ready to assist you.','Butuh Bantuan?':'Need Help?','Hubungi tim kami lewat Discord, kami siap membantu.':'Reach our team on Discord, we are happy to help.','Gabung Discord':'Join Discord'};
+
+const TN=[];
+for(const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);w.nextNode();){
+  const n=w.currentNode,k=n.nodeValue.trim();
+  if(k&&EN[k]&&!n.parentElement.closest('script,style'))TN.push([n,n.nodeValue]);
+}
+function setLang(l){
+  lang=l;document.documentElement.lang=l;
+  for(const[n,o]of TN){const k=o.trim();n.nodeValue=l==='en'?o.replace(k,()=>EN[k]):o}
+  $$('.lang button').forEach(b=>{const on=b.dataset.l===l;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
+  document.title='ICIKI NETWORK | '+(l==='en'?'Team':'Tim');
+  renderTeam();
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+$$('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+setLang(lang);
+
+// ember particles (pixel-style)
+(()=>{
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const c=$('#fx'),x=c.getContext('2d'),cols=['#F19A0C','#E3592F','#FAF180','#FF0066','#8A35C7'];let w,h;
+  const rs=()=>{w=c.width=innerWidth;h=c.height=innerHeight};rs();addEventListener('resize',rs);
+  const mk=r=>({x:Math.random()*w,y:r?Math.random()*h:h+10,s:Math.random()*3+2,v:Math.random()*.6+.2,d:Math.random()*6.28,c:cols[Math.random()*5|0],a:Math.random()*.6+.2});
+  const P=Array.from({length:innerWidth<700?24:60},()=>mk(true));
+  (function f(){
+    x.clearRect(0,0,w,h);
+    for(const p of P){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.4;if(p.y<-10)Object.assign(p,mk());x.globalAlpha=p.a;x.fillStyle=p.c;x.fillRect(p.x,p.y,p.s,p.s)}
+    requestAnimationFrame(f);
+  })();
+})();
+</script>
+</body>
+</html>

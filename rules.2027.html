@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#150B2D">
+<meta name="description" content="Aturan server ICIKI NETWORK dan GMC: aturan umum, in-game, sanksi, Discord, dan aturan staff.">
+<title>ICIKI NETWORK | Aturan Server</title>
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#150B2D;--wine:#581018;--red:#BE1522;--or:#F19A0C;--em:#E3592F;--gold:#FAF180;--pink:#FF0066;--pur:#8A35C7;--tx:#f6f0ff;--mut:#b9abd6;--card:rgba(36,18,70,.6);--bd:rgba(250,241,128,.14);--grad:linear-gradient(120deg,var(--gold),var(--or) 50%,var(--pink))}
+html{scroll-behavior:smooth;scroll-padding-top:100px;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+body{font-family:'Chakra Petch','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 0,rgba(190,21,34,.5),transparent 70%),radial-gradient(40% 40% at 95% 55%,rgba(138,53,199,.3),transparent 70%),radial-gradient(45% 40% at 0 85%,rgba(88,16,24,.8),transparent 70%)}
+#fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:3000}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* nav */
+nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(1240px,94%);z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px 9px 18px;border-radius:999px;background:rgba(21,11,45,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--bd);transition:background .3s,box-shadow .3s}
+nav.scrolled{background:rgba(21,11,45,.94);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:.78rem 'Press Start 2P',monospace;color:var(--gold);min-width:44px}
+.brand img{height:44px;border-radius:8px;display:block}
+.links{display:flex;gap:2px}
+.links a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:99px;font-weight:500;font-size:.95rem;transition:.2s}
+.links a:hover,.links a.cur{color:var(--gold);background:rgba(255,255,255,.07)}
+.acts{display:flex;gap:8px;align-items:center}
+#burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:rgba(255,255,255,.06);color:var(--tx);font-size:1.1rem;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 28px;border-radius:99px;border:0;font:600 1rem 'Chakra Petch',sans-serif;cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--red),var(--pink));box-shadow:0 6px 24px rgba(255,0,102,.35);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(255,0,102,.55)}
+.btn.sm{padding:9px 18px;font-size:.88rem}
+.btn.gold{background:linear-gradient(135deg,var(--gold),var(--or));color:#2b1000;box-shadow:0 6px 24px rgba(241,154,12,.35)}
+.lang{display:flex;padding:3px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid var(--bd)}
+.lang button{border:0;background:none;color:var(--mut);font:600 .8rem 'Chakra Petch',sans-serif;padding:6px 11px;border-radius:99px;cursor:pointer;transition:.2s}
+.lang button.on{background:var(--gold);color:var(--wine)}
+/* hero */
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:150px 5% 30px}
+h1{font:clamp(1.1rem,5.2vw,3.4rem)/1.3 'Press Start 2P',monospace;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 0 var(--wine)) drop-shadow(0 0 40px rgba(190,21,34,.7));animation:drop .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes drop{from{opacity:0;transform:translateY(-40px) scale(.96)}}
+.hero p{max-width:660px;margin:22px auto 0;font-size:1.1rem;color:var(--mut);animation:drop .9s .15s both}
+.upd{display:inline-flex;align-items:center;gap:10px;margin-top:24px;padding:7px 18px;border-radius:99px;background:rgba(0,0,0,.35);border:1px solid var(--bd);font-size:.9rem;color:var(--mut);animation:drop .9s .3s both}
+.upd i{color:var(--gold)}
+/* layout */
+.wrap{max-width:1160px;margin:30px auto 0;padding:0 5%;display:grid;grid-template-columns:270px 1fr;gap:32px;align-items:start}
+.toc{position:sticky;top:96px;padding:22px 18px;border-radius:22px;background:rgba(21,11,45,.84);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--bd);max-height:calc(100vh - 120px);overflow-y:auto}
+.toc h2{font-size:.95rem;color:var(--or);margin-bottom:12px;padding-left:10px;display:flex;align-items:center;gap:8px}
+.toc a{display:flex;align-items:center;gap:10px;padding:7px 10px;border-radius:12px;color:var(--mut);text-decoration:none;font-size:.92rem;line-height:1.35;transition:.2s}
+.toc a b{flex:none;width:24px;height:24px;border-radius:8px;display:grid;place-items:center;font:.55rem 'Press Start 2P',monospace;background:rgba(255,255,255,.08);color:var(--mut);transition:.2s}
+.toc a:hover{color:var(--gold);background:rgba(255,255,255,.06)}
+.toc a.on{color:var(--gold);background:rgba(250,241,128,.1)}
+.toc a.on b{background:var(--gold);color:var(--wine)}
+.doc{display:flex;flex-direction:column;gap:18px;min-width:0}
+.sec{padding:30px 32px;border-radius:22px;background:var(--card);border:1px solid var(--bd);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .3s}
+.sec.on{border-color:rgba(241,154,12,.5)}
+.sec>h2{display:flex;align-items:center;gap:14px;font-size:1.45rem;line-height:1.3;margin-bottom:6px}
+.sec>h2 b{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font:.75rem 'Press Start 2P',monospace;background:var(--gold);color:var(--wine)}
+.sec .lead{color:var(--mut);margin:6px 0 0}
+.ay{margin-top:26px;padding-top:22px;border-top:1px solid var(--bd)}
+.ay:first-of-type{border-top:0;padding-top:0;margin-top:18px}
+.ay h3{display:flex;align-items:center;gap:10px;font-size:1.15rem;color:var(--gold);line-height:1.35;margin-bottom:12px}
+.ay h3 span{flex:none;padding:2px 12px;border-radius:99px;background:rgba(250,241,128,.14);border:1px solid var(--bd);font-size:.72rem;font-weight:700;letter-spacing:.04em;color:var(--gold);white-space:nowrap}
+.bh{font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--or);margin:16px 0 8px}
+.ay p{color:var(--mut);margin-top:8px}
+.ay ul{list-style:none;display:grid;gap:8px}
+.ay li{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.05);color:var(--tx)}
+.ay li>i{flex:none;margin-top:5px;font-size:.85rem}
+.ay li small{display:block;color:var(--mut);font-size:.9rem;margin-top:2px}
+.ay li .nb{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--gold);color:var(--wine);font:.6rem 'Press Start 2P',monospace;margin-top:2px}
+.x i{color:var(--em)}.ok>li>i{color:#2ee59d}.sc>li>i{color:var(--or)}
+.steps li{align-items:stretch;padding:0;overflow:hidden;background:rgba(0,0,0,.28);border:1px solid var(--bd)}
+.steps li .lb{flex:none;width:176px;padding:12px 14px;font-weight:700;font-size:.9rem;display:flex;align-items:center;background:var(--c);color:var(--cc,#fff)}
+.steps li .tx{padding:12px 16px;align-self:center}
+.note{display:flex;gap:12px;align-items:flex-start;margin-top:14px;padding:14px 16px;border-radius:14px;background:rgba(241,154,12,.1);border:1px solid rgba(241,154,12,.35);color:var(--tx);font-size:.95rem}
+.note i{flex:none;margin-top:4px;color:var(--or)}
+.key{margin-top:14px;padding:16px 18px;border-radius:16px;background:linear-gradient(135deg,rgba(190,21,34,.35),rgba(255,0,102,.2));border:1px solid rgba(255,0,102,.4);font-weight:600}
+.key i{color:var(--gold);margin-right:8px}
+.agree{margin-top:18px;padding:34px 6%;border-radius:26px;text-align:center;background:linear-gradient(135deg,var(--wine),var(--red) 60%,var(--em));box-shadow:0 24px 70px rgba(190,21,34,.3)}
+.agree h2{font-size:clamp(1.4rem,3vw,2rem)}
+.agree p{margin:8px 0 22px;color:#ffe4dd}
+.agree .btn{background:linear-gradient(135deg,var(--gold),var(--or));color:#2b1000;box-shadow:0 6px 24px rgba(241,154,12,.35)}
+.top{position:fixed;right:22px;bottom:24px;width:46px;height:46px;border-radius:50%;border:1px solid var(--bd);background:rgba(21,11,45,.9);color:var(--gold);cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(10px);transition:.3s;z-index:900}
+.top.show{opacity:1;pointer-events:auto;transform:none}
+.top:hover{background:var(--gold);color:var(--wine)}
+.soc{display:flex;gap:10px;margin-top:20px}
+.soc a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:var(--tx);text-decoration:none;transition:.25s}
+.soc a:hover{background:var(--pink);transform:translateY(-3px)}
+/* footer */
+footer{margin-top:90px;padding:50px 5% 24px;background:rgba(21,11,45,.85);border-top:1px solid var(--bd)}
+.fc{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
+footer h3{color:var(--or);margin-bottom:16px}
+footer p,footer li a,footer li .lk{color:var(--mut)}
+footer ul{list-style:none}
+footer li{margin-bottom:10px}
+footer li a{text-decoration:none;transition:.2s}
+footer li a:hover,footer li .lk:hover{color:var(--gold)}
+footer li .lk{color:var(--mut);transition:.2s}
+.lk{background:none;border:0;padding:0;font:inherit;cursor:pointer;text-align:left}
+footer li i{width:22px;color:var(--em)}
+.fb{max-width:1200px;margin:34px auto 0;padding-top:22px;border-top:1px solid var(--bd);text-align:center;color:var(--mut);font-size:.9rem}
+/* discord popup */
+html.modal-open body{overflow:hidden}
+.modal{display:none;position:fixed;inset:0;z-index:4000;place-items:center;padding:20px;background:rgba(10,5,24,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.modal.open{display:grid;animation:fade .25s both}
+@keyframes fade{from{opacity:0}}
+.mbox{position:relative;width:min(420px,100%);padding:36px 28px 28px;border-radius:24px;text-align:center;background:linear-gradient(160deg,rgba(88,16,24,.95),rgba(36,18,70,.96));border:1px solid rgba(250,241,128,.45);box-shadow:0 24px 70px rgba(0,0,0,.6);animation:pop .35s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.94)}}
+.mic{margin:0 auto 16px;width:68px;height:68px;border-radius:18px;display:grid;place-items:center;font-size:1.9rem;color:#fff;background:linear-gradient(135deg,#5865F2,#7983f5);box-shadow:0 8px 22px rgba(88,101,242,.45)}
+.mbox h3{font:1rem/1.4 'Press Start 2P',monospace;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:14px}
+.mbox p{color:var(--mut);margin-bottom:22px}
+.mbox .btn{width:100%;justify-content:center}
+.mx{position:absolute;top:12px;right:12px;width:40px;height:40px;border-radius:50%;border:1px solid var(--bd);background:rgba(255,255,255,.08);color:var(--tx);font-size:1rem;cursor:pointer}
+.mx:hover{background:var(--pink)}
+@media(max-width:900px){
+.wrap{grid-template-columns:1fr;gap:20px}
+.toc{position:static;max-height:none;padding:16px 12px 12px}
+#toc{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;padding-bottom:6px;scrollbar-width:none}
+#toc::-webkit-scrollbar{display:none}
+#toc a{flex:none;white-space:nowrap;padding:10px 14px;min-height:44px;background:rgba(255,255,255,.05)}
+}
+@media(max-width:1100px){
+nav{top:max(10px,env(safe-area-inset-top))}
+.links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;gap:4px;padding:12px;border-radius:24px;background:rgba(21,11,45,.97);border:1px solid var(--bd);max-height:calc(100svh - 100px);overflow-y:auto}
+.links.open{display:flex}
+.links a{padding:14px 18px;font-size:1.05rem;min-height:48px;display:flex;align-items:center}
+#burger{display:block}
+.lang button{padding:9px 13px;min-height:36px}
+}
+@media(max-width:860px){
+.fc{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+.acts .btn span{display:none}
+.acts .btn{padding:10px 14px;min-width:42px;min-height:42px;justify-content:center}
+nav{padding:7px 8px 7px 12px;gap:6px}
+.brand img{height:38px}
+.acts{gap:6px}
+.hero{padding:120px 5% 20px}
+.hero p{font-size:1rem}
+.upd{font-size:.82rem;padding:7px 14px;text-align:center}
+.sec{padding:22px 16px;border-radius:18px}
+.sec>h2{font-size:1.2rem;gap:12px}
+.sec>h2 b{width:40px;height:40px;font-size:.65rem}
+.ay h3{font-size:1.05rem;flex-wrap:wrap}
+.ay li{padding:10px 12px}
+.steps li{flex-direction:column}
+.steps li .lb{width:auto;padding:8px 14px}
+.steps li .tx{padding:10px 14px}
+.agree{padding:28px 6%}
+.agree .btn{width:100%;justify-content:center}
+.soc a{width:44px;height:44px}
+.top{right:14px;bottom:calc(16px + env(safe-area-inset-bottom))}
+footer{padding:40px 5% calc(24px + env(safe-area-inset-bottom));margin-top:50px}
+footer li a,footer li .lk{display:inline-block;padding:4px 0}
+}
+@media(max-width:400px){
+.brand img{height:34px}
+.lang button{padding:8px 10px}
+}
+@media(hover:none){.btn:hover,.soc a:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media print{#fx,nav,.toc,.top,.agree,footer,#bar{display:none!important}body{background:#fff;color:#000}.sec{border:0;background:none;padding:10px 0}.ay p,.ay li,.ay li small{color:#000}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<canvas id="fx"></canvas>
+
+<nav id="nav">
+  <a class="brand" href="index.html" aria-label="ICIKI NETWORK"><img src="logo.png" alt="Logo ICIKI NETWORK" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'ICIKI'}))"></a>
+  <div class="links" id="links"><a href="index.html">Beranda</a><a href="shop.2027.html">Toko</a><a href="team.2027.html">Tim</a><a href="status.2027.html">Status</a><a href="help.2027.html">Bantuan</a><a class="cur" href="rules.2027.html" aria-current="page">Aturan</a><a href="ToS.2027.html">ToS</a></div>
+  <div class="acts">
+    <div class="lang" role="group" aria-label="Language"><button data-l="id" class="on" aria-pressed="true">ID</button><button data-l="en" aria-pressed="false">EN</button></div>
+    <a href="https://minecraft-mp.com/server/346397/vote/" class="btn gold sm" target="_blank" rel="noopener" aria-label="Vote"><i class="fas fa-vote-yea"></i><span>Vote</span></a>
+    <a href="https://discord.gg/JYS6N85TjE" class="btn sm" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i><span>Discord</span></a>
+    <button id="burger" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>ATURAN<br>SERVER</h1>
+  <p id="intro"></p>
+  <div class="upd"><i class="fas fa-scale-balanced"></i><span id="upd"></span></div>
+</header>
+
+<div class="wrap">
+  <aside class="toc" aria-label="Daftar isi"><h2><i class="fas fa-list-ul"></i><span id="toct"></span></h2><div id="toc"></div></aside>
+  <main class="doc" id="doc"></main>
+</div>
+
+<div class="wrap" style="grid-template-columns:1fr">
+  <div class="agree">
+    <h2 id="ah"></h2>
+    <p id="ap"></p>
+    <a class="btn" href="https://discord.gg/JYS6N85TjE" target="_blank" rel="noopener"><i class="fab fa-discord"></i> <span id="ab"></span></a>
+  </div>
+</div>
+
+<button class="top" id="top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+<footer>
+  <div class="fc">
+    <div><h3>ICIKI NETWORK</h3><p>Petualangan Minecraft survival multiplayer dengan fitur kustom, event, dan komunitas yang luar biasa.</p>
+      <div class="soc"><a href="https://discord.gg/JYS6N85TjE" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a><a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+    <div><h3>Tautan Cepat</h3><ul><li><a href="index.html"><i class="fas fa-home"></i>Beranda</a></li><li><a href="shop.2027.html"><i class="fas fa-store"></i>Toko</a></li><li><button type="button" class="lk" id="openDiscord"><i class="fas fa-users"></i>Komunitas</button></li><li><a href="help.2027.html"><i class="fas fa-circle-question"></i>Bantuan</a></li></ul></div>
+    <div><h3>Dukungan</h3><ul><li><a href="help.2027.html"><i class="fas fa-headset"></i>Hubungi Kami</a></li><li><a href="ToS.2027.html"><i class="fas fa-file-lines"></i>Syarat Layanan</a></li><li><a href="rules.2027.html"><i class="fas fa-scale-balanced"></i>Aturan Server</a></li><li><a href="help.2027.html"><i class="fas fa-shield-halved"></i>Kebijakan Privasi</a></li><li><a href="help.2027.html"><i class="fas fa-rotate-left"></i>Kebijakan Pengembalian</a></li></ul></div>
+  </div>
+  <div class="fb">&copy; <span id="yr"></span> ICIKI NETWORK. All rights reserved.</div>
+</footer>
+
+<!-- DISCORD POPUP -->
+<div class="modal" id="dmodal" role="dialog" aria-modal="true" aria-labelledby="dtitle">
+  <div class="mbox">
+    <button type="button" class="mx" id="closeDiscord" aria-label="Close"><i class="fas fa-xmark"></i></button>
+    <div class="mic"><i class="fab fa-discord"></i></div>
+    <h3 id="dtitle">GABUNG DISCORD</h3>
+    <p>Ngobrol dengan pemain lain, ikut event, dan dapatkan bantuan dari tim kami di komunitas Discord ICIKI NETWORK.</p>
+    <a href="https://discord.gg/JYS6N85TjE" class="btn gold" id="joinDiscord" target="_blank" rel="noopener"><i class="fab fa-discord"></i><span>Gabung Server</span></a>
+  </div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+$('#yr').textContent=new Date().getFullYear();
+
+// ===== ISI ATURAN: edit teks di sini =====
+// Struktur: PASAL -> ayat -> blocks. Tipe block:
+//  x = larangan (ikon silang) | ok = diperbolehkan/syarat (centang) | sc = daftar sanksi (palu)
+//  steps = tangga sanksi "Label: isi" | defs = [judul, penjelasan] | num = daftar bernomor | p = paragraf | key = penekanan
+const NET='ICIKI Network And GMC 「 Geng Minecraft Community 」';
+const META={
+ sub:['Berlaku untuk ICIKI NETWORK dan GMC','Applies to ICIKI NETWORK and GMC'],
+ intro:['Selamat datang di '+NET+'! Pastikan kamu memahami dan mengikuti pedoman berikut untuk menjaga kenyamanan dan kesenangan bersama selama bermain.','Welcome to ICIKI Network and GMC (Geng Minecraft Community)! Make sure you understand and follow the guidelines below to keep playing comfortable and fun for everyone.'],
+ toc:['Daftar Pasal','Chapters'],
+ pasal:['Pasal','Chapter'],ayat:['Ayat','Verse'],
+ lang:['','Note: the rules below are written in Indonesian, the official language of the server. Ask our team on Discord if anything is unclear.'],
+ ah:['Ada yang kurang jelas?','Something unclear?'],
+ ap:['Tanyakan langsung ke tim kami di Discord, atau ajukan banding jika kamu terkena sanksi.','Ask our team directly on Discord, or file an appeal if you were punished.'],
+ ab:['Gabung Discord','Join Discord']
+};
+const PASAL=[
+{id:'p1',t:'Aturan Umum',ic:'earth-asia',ayat:[
+ {t:'Etika Berinteraksi',b:[
+  {k:'x',i:['Dilarang menggunakan kata-kata kasar, penghinaan, atau komentar yang merendahkan pemain lain.','Dilarang melakukan tindakan provokatif yang dapat memicu konflik antar pemain. Seperti membully, menghina, dan sebagainya.','Dilarang menyebarkan informasi palsu atau rumor yang dapat merusak reputasi pemain atau server.','Dilarang mengirim spam (pesan berulang), flood (membanjiri chat), atau konten yang tidak relevan di chat.','Dilarang membahas topik sensitif seperti politik, agama, atau isu kontroversial.','Dilarang melecehkan, menghina, menghakimi orang lain.','Dilarang mempromosikan link atau apapun itu.','Dilarang menyebabkan kerusuhan seperti membuat drama, mengancam, atau melecehkan orang.','Dilarang membahas topik pornografi dan semacamnya.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Peringatan tertulis berupa Warning.','Pelanggaran Kedua: Mute sementara selama 30 menit.','Pelanggaran Ketiga: Mute sementara selama 1 jam.','Pelanggaran Berulang (Lebih dari 3x): Mute sementara selama 3 jam.']}]},
+ {t:'Perilaku yang Mengganggu',b:[
+  {k:'x',i:['Dilarang mengganggu pemain lain saat mereka sedang bermain, seperti menghancurkan bangunan/building tanpa izin atau mengganggu proyek yang sedang dikerjakan.','Dilarang menggunakan fitur permainan untuk mengganggu atau mengacaukan aktivitas pemain lain, seperti spawn creeper, tnt, lava atau smite.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Peringatan tertulis berupa Warning.','Pelanggaran Kedua: Ban sementara selama 1 jam.','Pelanggaran Ketiga: Ban sementara selama 6 jam.']}]}
+]},
+{id:'p2',t:'Aturan In-Game',ic:'gamepad',ayat:[
+ {t:'Eksploitasi Bug dan Glitch',b:[
+  {k:'ok',h:'Wajib',i:['Setiap bug atau glitch yang ditemukan harus segera dilaporkan kepada staff server untuk diperbaiki dan meningkatkan kualitas permainan.']},
+  {k:'x',h:'Dilarang',i:['Dilarang menggunakan bug atau glitch untuk mendapatkan keuntungan tidak adil, seperti memperoleh sumber daya, xp, atau balance secara instan atau cepat, atau menjualnya untuk menguntungkan diri sendiri atau orang lain.','Dilarang menggunakan bug atau glitch untuk merusak atau menghancurkan properti pemain lain atau properti server.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Ban permanen sampai mengajukan banding ke Discord Support untuk menjelaskan cara kerja dupenya. Barang hasil dupe akan diambil, dan Ban sementara selama 1 hari.','Pelanggaran Kedua: Ban permanen sampai mengajukan banding ke Discord Support untuk menjelaskan cara kerja dupenya. Barang hasil dupe akan diambil, dan Ban sementara selama 7 hari.','Pelanggaran Ketiga: Ban permanen sampai mengajukan banding ke Discord Support untuk menjelaskan cara kerja dupenya. Barang hasil dupe akan diambil, dan Ban sementara selama 14 hari.']}]},
+ {t:'Penggunaan Hack dan Cheat',b:[
+  {k:'x',i:['Dilarang menggunakan aplikasi/software/mod/program pihak ketiga yang dapat memberikan keuntungan tidak adil seperti Kill Aura, Fly, Speed hack, Xray, dll.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Ban sementara selama 6 jam.','Pelanggaran Kedua: Ban sementara selama 1 hari.','Pelanggaran Berulang: Ban sementara selama 3 hari.']}]},
+ {t:'Mods',b:[
+  {k:'x',h:'Dilarang',i:['Dilarang menggunakan mods yang memberikan keuntungan tidak adil atau merusak integritas permainan, seperti: AutoTotem, X-Ray, AutoCrit, Fly, Jump, SpeedHacks, FreeCam, dll.']},
+  {k:'ok',h:'Diperbolehkan',i:['Diperbolehkan menggunakan mods yang meningkatkan kualitas permainan tanpa memberikan keuntungan tidak adil, seperti: NightVision, MiniMap, Performance Enhancers (seperti OptiFine, dll), Cosmetic Mods, Utility Mods, AutoFish Mod, Assist Bridge, Macro/Scripting']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Peringatan tertulis berupa Warning.','Pelanggaran Kedua: Ban sementara selama 1 hari.','Pelanggaran Ketiga: Ban sementara selama 3 hari.']}]},
+ {t:'Penggunaan Trap',b:[
+  {k:'x',i:['Dilarang membuat trap untuk menjebak player dengan tujuan untuk mencuri lootingan player atau tujuan lain seperti trap kill dan sejenisnya.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Peringatan tertulis berupa Warning.','Pelanggaran Kedua: Ban sementara selama 1 hari.','Pelanggaran Ketiga: Ban sementara selama 3 hari.']}]},
+ {t:'Griefing',b:[
+  {k:'x',i:['Dilarang mengganggu, menjahili, atau merusak bangunan atau properti orang seperti lava cast, mencuri, dan sejenisnya.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Peringatan tertulis berupa Warning.','Pelanggaran Kedua: Ban sementara selama 1 hari.','Pelanggaran Ketiga: Ban sementara selama 3 hari.']}]},
+ {t:'Penipuan',b:[
+  {k:'x',i:['Dilarang menipu, memanipulasi, atau sejenisnya.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Peringatan tertulis berupa Warning.','Pelanggaran Kedua: Ban sementara selama 1 hari.','Pelanggaran Ketiga: Ban sementara selama 3 hari.']}]},
+ {t:'Transaksi dan Perdagangan',b:[
+  {k:'x',i:['Dilarang menjual barang in-game, rank, level, akun, atau apapun itu yang berada di dalam game untuk uang asli (tindakan RMT atau Real-Money-Trade)']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Ban sementara selama 1 hari dan penyitaan barang/rank/level/akun yang dijual/dibeli.','Pelanggaran Kedua: Ban sementara selama 3 hari dan penyitaan barang/rank/level/akun yang dijual/dibeli.','Pelanggaran Ketiga: Ban sementara selama 7 hari dan penyitaan barang/rank/level/akun yang dijual/dibeli.']}]},
+ {t:'Penyalahgunaan Fitur',b:[
+  {k:'x',i:['Dilarang menyalahgunakan fitur, seperti menggunakan fitur spawnmob untuk menghancurkan base orang dengan spawn banyak creeper, berperilaku rusuh, dan sejenisnya.']},
+  {k:'steps',h:'Sanksi',i:['Pelanggaran Pertama: Ban sementara selama 6 jam.','Pelanggaran Kedua: Ban sementara selama 1 hari.','Pelanggaran Ketiga: Ban sementara selama 3 hari.']}]}
+]},
+{id:'p3',t:'Sanksi',ic:'gavel',ayat:[
+ {t:'Jenis Sanksi',b:[
+  {k:'defs',i:[['Warn','Peringatan tertulis yang dicatat.'],['Mute','Pembatasan akses komunikasi atau chat player.'],['Ban Sementara','Pembatasan akses ke server untuk waktu yang ditentukan.'],['Demosi','Penurunan jabatan atau pencabutan status staff.'],['Pemecatan','Pemberhentian secara permanen sebagai staff.']]}]},
+ {t:'Banding',b:[
+  {k:'ok',i:['Setiap player yang terkena sanksi berhak mengajukan banding atau appeal yang dapat dilakukan di Discord - '+NET+' Support resmi.','Staff support akan meninjau sanksi kamu dan akan mempertimbangkan untuk menerima atau menolak bandingmu secepat mungkin.','Khusus sanksi pemecatan staff, banding akan ditinjau langsung oleh Owner dan Co-Owner.']}]}
+]},
+{id:'p4',t:'Tambahan',ic:'circle-plus',ayat:[
+ {t:'Donasi',b:[
+  {k:'p',i:['Segala jenis donasi, atau pengeluaran uang di '+NET+' adalah bentuk dari donasi yang dilakukan pemain dengan kesadaran penuh untuk membantu, dan mendukung server '+NET+' untuk terus berkembang.']}]},
+ {t:'Perubahan Aturan',b:[
+  {k:'p',i:['Server Minecraft '+NET+' berhak mengubah peraturan kapanpun dengan pemberitahuan resmi di Discord resmi Server Minecraft '+NET+'.']}]}
+]},
+{id:'p5',t:'Rules Discord',ic:'discord',brand:1,ayat:[
+ {t:'Rules Discord',b:[
+  {k:'defs',i:[
+   ['Dilarang membahas agama','Demi menjaga komunikasi, dilarang membahas agama dengan cara yang merendahkan atau menghina.'],
+   ['Dilarang menipu orang lain','Semua pemain diharapkan bermain dengan jujur dan adil.'],
+   ['Dilarang menggunakan bahasa kotor (hanya di Discord)','Penggunaan kata-kata atau frasa yang biasanya dianggap vulgar, jorok, atau mengandung konten seksual yang eksplisit. Hindari singkatan atau pelesetan yang merujuk kata kotor.'],
+   ['Tidak boleh promosi tanpa seizin admin','Termasuk promosi yang tidak terkait dengan server.'],
+   ['Dilarang memperburuk situasi ketika terjadi masalah','Harus tetap tenang dalam mengambil langkah-langkah untuk menyelesaikan masalah tersebut dengan cara yang baik dan adil.'],
+   ['Wajib bersikap adil dan memperlakukan semua orang dengan sama rata','Semua orang perlu menghormati privasi orang lain dan tidak melakukan tindakan yang dapat menyebabkan kerugian.'],
+   ['Dilarang spam chat atau rejoin voice channel','Mengirimkan pesan berulang-ulang yang tidak penting atau mengulang-ulang masuk dari channel voice secara berlebihan. Hal ini juga termasuk mention yang berlebihan.'],
+   ['Dilarang membagikan informasi pribadi tentang orang lain di server tanpa izin dari orang tersebut','Ini termasuk informasi seperti alamat, sosial media, atau nomor telepon.'],
+   ['Dilarang mengirim konten berunsur pornografi atau konten yang menyeramkan','Tidak diizinkan mengirimkan pesan atau konten dengan muatan pornografi atau menyeramkan di server. Ini termasuk gambar, video, atau audio yang mengandung muatan pornografi atau menyeramkan.']]}]},
+ {t:'Hak Owner',b:[
+  {k:'p',i:['Rule Owner Discord & Owner ICIKI: keterkaitan hak admin.']},
+  {k:'num',i:[
+   ['Owner Discord tidak boleh sembarangan menghapus admin di Discord','Jika Owner Discord menghapus admin tanpa alasan yang jelas & persetujuan tim, maka hak admin orang tersebut di Minecraft '+NET+' akan ikut dicabut dari Owner Discord yang melakukan pelanggaran.'],
+   ['Owner ICIKI Network tidak boleh sembarangan menghapus admin di hosting Minecraft','Jika Owner ICIKI menghapus admin tanpa alasan yang jelas & persetujuan tim, maka hak admin orang tersebut di GMC 「 Geng Minecraft Community 」 akan ikut dicabut dari Owner ICIKI Network yang melakukan pelanggaran.'],
+   ['Owner '+NET+' tidak boleh sembarangan menghapus admin di Minecraft','Jika Owner '+NET+' menghapus admin tanpa alasan yang jelas & persetujuan tim, maka hak admin orang tersebut di Discord akan ikut dicabut dari Owner '+NET+' yang melakukan pelanggaran.'],
+   ['Setiap pencabutan admin harus ada alasan & bukti yang jelas','Wajib diskusi dengan co-owner atau admin utama lain sebelum memutuskan. Harus ada bukti (log, screenshot, laporan) jika admin dianggap melanggar.'],
+   ['Jika Owner melanggar aturan ini','Akan ada sanksi tegas berupa pencabutan sebagian hak akses Owner (di Discord & Minecraft) sementara, sampai masalah selesai dibahas.']]},
+  {k:'key',i:['Inti aturan: hak admin di Discord & Minecraft itu TERHUBUNG. Owner TIDAK BOLEH seenaknya mencabut admin karena masalah pribadi. Semua keputusan HARUS lewat persetujuan tim.']}]},
+ {t:'Roles',b:[
+  {k:'ok',i:['Setiap pembuatan role harus memiliki alasan yang jelas dan benar.','Pembuatan role hanya boleh dilakukan setelah mendapatkan izin dari Owner Minecraft dan Owner Discord.','Dilarang memberikan role staff kepada pemain yang memiliki riwayat pelanggaran berat.','Role staff tidak boleh disalahgunakan untuk kepentingan pribadi.']}]}
+]},
+{id:'p6',t:'Aturan Khusus Admin, Helper dan Staff',short:'Aturan Staff',ic:'user-shield',lead:'Berlaku untuk ICIKI Network DAN GMC 「 Geng Minecraft Community 」',ayat:[
+ {t:'Kriteria dan Persyaratan',b:[
+  {k:'ok',i:['Minimal berusia 13 tahun atau memiliki kedewasaan yang cukup dalam berkomunikasi.','Minimal telah bermain di server selama 30 hari aktif.','Tidak memiliki catatan pelanggaran berat (ban karena cheat, dupe, RMT, dll).','Memiliki pemahaman yang baik tentang peraturan server.','Aktif bermain dan berkomunikasi di Discord maupun in-game.','Direkomendasikan minimal oleh 1 staff aktif atau melalui proses rekrutmen resmi.','Bersedia ditempatkan di kedua platform (ICIKI Network dan GMC) jika diperlukan.','Menyetujui dan menandatangani kode etik staff secara digital.']}]},
+ {t:'Tugas dan Tanggung Jawab',b:[
+  {k:'ok',h:'Helper',i:['Membantu pemain baru yang membutuhkan bantuan.','Menjawab pertanyaan pemain seputar mekanisme server.','Melaporkan kecurangan atau pelanggaran kepada Admin/Moderator.','Menjaga suasana chat tetap kondusif.','Memberikan informasi yang akurat dan tidak menyesatkan.','Wajib aktif membantu minimal 3 jam per hari (dapat dinegosiasikan).']},
+  {k:'ok',h:'Admin',i:['Menindak pelanggar dengan memberikan sanksi sesuai peraturan.','Memonitor aktivitas pemain dan memastikan server tetap aman.','Membantu proses rekrutmen dan pelatihan Helper.','Menyelesaikan laporan dan tiket dari pemain.','Melakukan rollback atau pengembalian barang jika diperlukan.','Mengelola event server.','Wajib hadir dalam meeting staff mingguan.','Membimbing Helper dalam menjalankan tugasnya.','Bertanggung jawab atas keputusan yang diambil saat bertugas.']}]},
+ {t:'Etika dan Perilaku',b:[
+  {k:'ok',i:['Staff wajib menjadi contoh yang baik bagi pemain lain.','Dilarang menggunakan wewenang untuk kepentingan pribadi atau kelompok.','Staff wajib bersikap profesional, adil, dan tidak memihak.','Dilarang memamerkan wewenang atau jabatan secara berlebihan.','Staff wajib menjaga kerahasiaan internal tim (tidak membocorkan diskusi staff).','Dilarang terlibat dalam drama atau konflik sebagai provokator.','Staff wajib menghormati staff lain tanpa memandang level jabatan.','Dilarang memberikan sanksi berdasarkan emosi atau dendam pribadi.','Staff harus mampu menerima kritik dan saran dengan lapang dada.']}]},
+ {t:'Larangan Khusus Staff',b:[
+  {k:'x',i:['Dilarang memberikan item, rank, atau keuntungan secara ilegal kepada pemain lain.','Dilarang menggunakan hak akses staff untuk kepentingan bisnis pribadi.','Dilarang menyalahgunakan command staff di luar tugas resmi.','Dilarang membantu pemain yang melakukan kecurangan agar terhindar dari sanksi.','Dilarang menjual atau mentransfer akun staff kepada orang lain.','Dilarang tidur atau AFK saat sedang bertugas (jika ada shift resmi).','Dilarang memberikan warning atau ban tanpa bukti yang jelas.','Dilarang mengabaikan laporan pemain tanpa alasan yang dapat dipertanggungjawabkan.','Dilarang double staffing (menjadi staff di server kompetitor) tanpa izin Owner.','Dilarang melakukan intimidasi atau ancaman kepada pemain.']}]},
+ {t:'Sanksi Khusus Staff',b:[
+  {k:'x',h:'Pelanggaran Ringan',i:['Terlambat/tidak hadir meeting tanpa konfirmasi.','Kurang aktif tanpa pemberitahuan.','Bersikap kurang sopan namun tidak merugikan.']},
+  {k:'sc',h:'Sanksi Ringan',i:['Peringatan lisan/tertulis.','Penugasan khusus (tugas tambahan).','Pembekuan sementara hak staff selama 3-7 hari.']},
+  {k:'x',h:'Pelanggaran Sedang',i:['Penyalahgunaan wewenang ringan.','Membocorkan informasi internal non-rahasia.','Tidak profesional dalam menangani laporan.','Membantu pemain secara tidak adil.']},
+  {k:'sc',h:'Sanksi Sedang',i:['Demosi dari Admin ke Helper / Helper ke Player.','Pencabutan hak akses khusus selama 14 hari.','Ban sementara dari tugas staff selama 7 hari.']},
+  {k:'x',h:'Pelanggaran Berat',i:['Korupsi item/rank server.','Memberikan ban/warning tanpa bukti.','Pelecehan seksual atau diskriminasi SARA.','Menjual item server untuk uang asli.','Membocorkan rahasia internal level tinggi.','Double staffing tanpa izin.']},
+  {k:'sc',h:'Sanksi Berat',i:['Pemecatan permanen.','Blacklist dari seluruh server ICIKI Network dan GMC.','Pencabutan seluruh akses dan role.','Ban permanen dari Discord dan Minecraft.','Dilaporkan ke server komunitas lain (jika diperlukan).']}]},
+ {t:'Sistem Evaluasi dan Mutasi',b:[
+  {k:'ok',i:['Evaluasi staff dilakukan setiap 2 minggu sekali.','Penilaian berdasarkan: Keaktifan, Kualitas kerja, Sikap, Kemampuan teamwork.','Staff dengan performa terbaik akan mendapatkan reward.','Helper yang dinilai layak dapat dipromosikan menjadi Admin.','Admin dengan performa buruk dapat didemosikan menjadi Helper.','Staff yang tidak aktif selama 7 hari tanpa konfirmasi akan dinonaktifkan sementara.','Staff yang tidak aktif selama 14 hari tanpa konfirmasi dapat dipecat.','Setiap staff berhak mengajukan cuti maksimal 7 hari dengan pemberitahuan minimal H-3.','Mutasi antar platform (ICIKI Network ↔ GMC) dapat dilakukan dengan persetujuan kedua belah pihak.','Seluruh keputusan mutasi harus melalui rapat tim dan disetujui Owner.']}]}
+]}
+];
+
+let lang='id';
+try{if(localStorage.getItem('lang')==='en')lang='en'}catch(e){}
+const L=()=>+(lang==='en');
+const pad=n=>String(n).padStart(2,'0');
+const STEPC=['#2ee59d','#F19A0C','#E3592F','#BE1522'],STEPT=['#06210f','#2b1000','#fff','#fff'];
+const IC={x:'xmark',ok:'circle-check',sc:'gavel'};
+function blk(b){
+  const h=b.h?`<div class="bh">${b.h}</div>`:'';
+  if(b.k==='p')return h+b.i.map(t=>`<p>${t}</p>`).join('');
+  if(b.k==='key')return b.i.map(t=>`<div class="key"><i class="fas fa-bolt"></i>${t}</div>`).join('');
+  if(b.k==='steps')return h+'<ul class="steps">'+b.i.map((t,n)=>{
+    const j=t.indexOf(':'),lb=j>0?t.slice(0,j):'',tx=j>0?t.slice(j+1).trim():t,c=Math.min(n,3);
+    return `<li style="--c:${STEPC[c]};--cc:${STEPT[c]}"><div class="lb">${lb}</div><div class="tx">${tx}</div></li>`;
+  }).join('')+'</ul>';
+  if(b.k==='num')return h+'<ul>'+b.i.map((d,n)=>`<li><span class="nb">${n+1}</span><span><b>${d[0]}</b><small>${d[1]}</small></span></li>`).join('')+'</ul>';
+  if(b.k==='defs')return h+'<ul class="ok">'+b.i.map(d=>`<li><i class="fas fa-${b.i.length>5?'ban':'circle-check'}"></i><span><b>${d[0]}</b><small>${d[1]}</small></span></li>`).join('')+'</ul>';
+  return h+`<ul class="${b.k}">`+b.i.map(t=>`<li><i class="fas fa-${IC[b.k]}"></i><span>${t}</span></li>`).join('')+'</ul>';
+}
+function render(){
+  const l=L();
+  $('#intro').textContent=META.intro[l];
+  $('#upd').textContent=META.sub[l];
+  $('#toct').textContent=META.toc[l];
+  $('#ah').textContent=META.ah[l];$('#ap').textContent=META.ap[l];$('#ab').textContent=META.ab[l];
+  $('#toc').innerHTML=PASAL.map((p,i)=>`<a href="#${p.id}" data-s="${p.id}"><b>${i+1}</b><span>${META.pasal[l]} ${i+1}: ${p.short||p.t}</span></a>`).join('');
+  let h=l?`<div class="note"><i class="fas fa-circle-info"></i><span>${META.lang[1]}</span></div>`:'';
+  h+=PASAL.map((p,i)=>`<section class="sec" id="${p.id}"><h2><b>${pad(i+1)}</b>${p.t}</h2>${p.lead?`<p class="lead">${p.lead}</p>`:''}`+
+    p.ayat.map((a,n)=>`<div class="ay"><h3><span>${META.ayat[l].toUpperCase()} ${n+1}</span>${a.t}</h3>${a.b.map(blk).join('')}</div>`).join('')+'</section>').join('');
+  $('#doc').innerHTML=h;
+  spy();
+}
+// scroll spy
+function spy(){
+  const secs=[...$$('.sec')];let cur=secs[0];
+  for(const s of secs){if(s.getBoundingClientRect().top<=140)cur=s}
+  $$('.sec').forEach(s=>s.classList.toggle('on',s===cur&&scrollY>200));
+  let act=null;
+  $$('#toc a').forEach(a=>{const on=cur&&a.dataset.s===cur.id&&scrollY>120;a.classList.toggle('on',on);if(on)act=a});
+  const tc=$('#toc');
+  if(act&&tc.scrollWidth>tc.clientWidth&&act!==spy.last){
+    spy.last=act;
+    tc.scrollTo({left:act.offsetLeft-(tc.clientWidth-act.offsetWidth)/2,behavior:'smooth'});
+  }
+}
+// nav + progress
+const nav=$('#nav'),bar=$('#bar'),links=$('#links'),burger=$('#burger'),toTop=$('#top');
+function onScroll(){
+  nav.classList.toggle('scrolled',scrollY>40);
+  const max=document.documentElement.scrollHeight-innerHeight;
+  bar.style.width=(max>0?scrollY/max*100:0)+'%';
+  toTop.classList.toggle('show',scrollY>600);
+  spy();
+}
+addEventListener('scroll',onScroll,{passive:true});
+toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+burger.onclick=()=>burger.setAttribute('aria-expanded',links.classList.toggle('open'));
+const closeMenu=()=>{links.classList.remove('open');burger.setAttribute('aria-expanded','false')};
+links.addEventListener('click',closeMenu);
+document.addEventListener('click',e=>{if(!nav.contains(e.target))closeMenu()});
+addEventListener('resize',()=>{if(innerWidth>1100)closeMenu()});
+// discord popup
+const dm=$('#dmodal'),openBtn=$('#openDiscord'),root=document.documentElement;
+function openDiscord(){dm.classList.add('open');root.classList.add('modal-open');$('#joinDiscord').focus()}
+function closeDiscord(){if(!dm.classList.contains('open'))return;dm.classList.remove('open');root.classList.remove('modal-open');openBtn.focus()}
+openBtn.onclick=openDiscord;
+$('#closeDiscord').onclick=closeDiscord;
+dm.addEventListener('click',e=>{if(e.target===dm)closeDiscord()});
+$('#joinDiscord').addEventListener('click',()=>setTimeout(closeDiscord,300));
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();closeDiscord()}});
+
+const EN={'Beranda':'Home','Toko':'Shop','Tim':'Team','Aturan':'Rules','Aturan Server':'Server Rules','Tautan Cepat':'Quick Links','Dukungan':'Support','Bantuan':'Help','Hubungi Kami':'Contact Us',
+'Syarat Layanan':'Terms of Service','Komunitas':'Community','GABUNG DISCORD':'JOIN OUR DISCORD','Gabung Server':'Join Server',
+'Ngobrol dengan pemain lain, ikut event, dan dapatkan bantuan dari tim kami di komunitas Discord ICIKI NETWORK.':'Chat with other players, join events, and get help from our team in the ICIKI NETWORK Discord community.','Kebijakan Privasi':'Privacy Policy','Kebijakan Pengembalian':'Refund Policy',
+'Petualangan Minecraft survival multiplayer dengan fitur kustom, event, dan komunitas yang luar biasa.':'A Minecraft survival multiplayer adventure with custom features, events and an amazing community.'};
+const TN=[];
+for(const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);w.nextNode();){
+  const n=w.currentNode,k=n.nodeValue.trim();
+  if(k&&EN[k]&&!n.parentElement.closest('script,style'))TN.push([n,n.nodeValue]);
+}
+function setLang(l){
+  lang=l;document.documentElement.lang=l;
+  for(const[n,o]of TN){const k=o.trim();n.nodeValue=l==='en'?o.replace(k,()=>EN[k]):o}
+  $$('.lang button').forEach(b=>{const on=b.dataset.l===l;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
+  document.title='ICIKI NETWORK | '+(l==='en'?'Server Rules':'Aturan Server');
+  $('h1').innerHTML=l==='en'?'SERVER<br>RULES':'ATURAN<br>SERVER';
+  render();onScroll();
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+$$('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+setLang(lang);
+if(location.hash){const t=document.getElementById(location.hash.slice(1));if(t)setTimeout(()=>t.scrollIntoView(),50)}
+
+// ember particles (pixel-style)
+(()=>{
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const c=$('#fx'),x=c.getContext('2d'),cols=['#F19A0C','#E3592F','#FAF180','#FF0066','#8A35C7'];let w,h;
+  const rs=()=>{w=c.width=innerWidth;h=c.height=innerHeight};rs();addEventListener('resize',rs);
+  const mk=r=>({x:Math.random()*w,y:r?Math.random()*h:h+10,s:Math.random()*3+2,v:Math.random()*.6+.2,d:Math.random()*6.28,c:cols[Math.random()*5|0],a:Math.random()*.6+.2});
+  const P=Array.from({length:innerWidth<700?24:60},()=>mk(true));
+  (function f(){
+    x.clearRect(0,0,w,h);
+    for(const p of P){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.4;if(p.y<-10)Object.assign(p,mk());x.globalAlpha=p.a;x.fillStyle=p.c;x.fillRect(p.x,p.y,p.s,p.s)}
+    requestAnimationFrame(f);
+  })();
+})();
+</script>
+</body>
+</html>

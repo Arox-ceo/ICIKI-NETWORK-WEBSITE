@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#150B2D">
+<meta name="description" content="ICIKI NETWORK — server Minecraft survival dengan fitur kustom, event, dan komunitas aktif.">
+<title>ICIKI NETWORK | Website Resmi</title>
+<link rel="icon" type="image/png" href="logo.png">
+<script>try{var n=performance.getEntriesByType('navigation')[0];if(sessionStorage.getItem('ld')&&!(n&&n.type==='reload'))document.documentElement.className='seen'}catch(e){}</script>
+<noscript><style>#ld{display:none}html:not(.seen) body{overflow:auto}</style></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Press+Start+2P&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#150B2D;--wine:#581018;--red:#BE1522;--or:#F19A0C;--em:#E3592F;--gold:#FAF180;--pink:#FF0066;--pur:#8A35C7;--tx:#f6f0ff;--mut:#b9abd6;--card:rgba(36,18,70,.6);--bd:rgba(250,241,128,.14);--grad:linear-gradient(120deg,var(--gold),var(--or) 50%,var(--pink))}
+html{scroll-behavior:smooth;scroll-padding-top:90px;-webkit-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+body{font-family:'Chakra Petch','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 50% at 50% 0,rgba(190,21,34,.5),transparent 70%),radial-gradient(40% 40% at 95% 55%,rgba(138,53,199,.3),transparent 70%),radial-gradient(45% 40% at 0 85%,rgba(88,16,24,.8),transparent 70%)}
+#fx{position:fixed;inset:0;z-index:-1;pointer-events:none}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--grad);z-index:3000}
+a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+/* loading screen */
+html:not(.seen) body{overflow:hidden}
+.seen #ld{display:none}
+#ld{position:fixed;inset:0;z-index:5000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;padding:0 6%;background:radial-gradient(60% 50% at 50% 0,rgba(190,21,34,.5),transparent 70%),radial-gradient(40% 40% at 95% 55%,rgba(138,53,199,.3),transparent 70%),var(--bg);transition:opacity .5s,visibility .5s}
+#ld.out{opacity:0;visibility:hidden}
+#ld img{height:clamp(56px,13vw,80px);border-radius:12px;display:block}
+.ltx{font:clamp(1rem,4.5vw,1.5rem) 'Press Start 2P',monospace;color:var(--gold);text-align:center}
+/* nav */
+nav{position:fixed;top:max(12px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(1160px,94%);z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px 9px 18px;border-radius:999px;background:rgba(21,11,45,.62);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--bd);transition:background .3s,box-shadow .3s}
+nav.sc{background:rgba(21,11,45,.94);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:.78rem 'Press Start 2P',monospace;color:var(--gold)}
+.brand img{height:44px;border-radius:8px;display:block}
+.links{display:flex;gap:2px}
+.links a{color:var(--mut);text-decoration:none;padding:8px 12px;border-radius:99px;font-weight:500;transition:.2s}
+.links a:hover,.links a.act{color:var(--gold);background:rgba(255,255,255,.07)}
+.acts{display:flex;gap:8px;align-items:center}
+#burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:rgba(255,255,255,.06);color:var(--tx);font-size:1.1rem;cursor:pointer}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 28px;border-radius:99px;border:0;font:600 1rem 'Chakra Petch',sans-serif;cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--red),var(--pink));box-shadow:0 6px 24px rgba(255,0,102,.35);transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(255,0,102,.55)}
+.gold{background:linear-gradient(135deg,var(--gold),var(--or));color:#2b1000;box-shadow:0 6px 24px rgba(241,154,12,.35)}
+.gold:hover{box-shadow:0 10px 32px rgba(241,154,12,.6)}
+.ghost{background:rgba(255,255,255,.07);border:1px solid var(--bd);box-shadow:none}
+.sm{padding:9px 18px;font-size:.88rem}
+.lang{display:flex;padding:3px;border-radius:99px;background:rgba(255,255,255,.07);border:1px solid var(--bd)}
+.lang button{border:0;background:none;color:var(--mut);font:600 .8rem 'Chakra Petch',sans-serif;padding:6px 11px;border-radius:99px;cursor:pointer;transition:.2s}
+.lang button.on{background:var(--gold);color:var(--wine)}
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 5% 70px}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 18px;border-radius:99px;background:rgba(190,21,34,.22);border:1px solid rgba(255,0,102,.4);font-size:.9rem;margin-bottom:28px}
+.dot{width:10px;height:10px;border-radius:50%;background:#2ee59d;animation:ping 1.8s infinite;flex:none}
+.dot.off{background:var(--red);animation:none}
+.dot.unk{background:var(--or);animation:none}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(46,229,157,.7)}70%,100%{box-shadow:0 0 0 11px transparent}}
+h1{font:clamp(2rem,8.5vw,5.6rem)/1.2 'Press Start 2P',monospace;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 0 var(--wine)) drop-shadow(0 0 40px rgba(190,21,34,.7));animation:drop .9s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes drop{from{opacity:0;transform:translateY(-40px) scale(.96)}}
+.hero p{max-width:620px;margin:26px auto 0;font-size:1.15rem;color:var(--mut);animation:drop .9s .15s both}
+.ip{margin-top:32px;display:inline-flex;align-items:center;gap:14px;padding:9px 9px 9px 24px;border-radius:99px;background:rgba(0,0,0,.4);border:2px dashed rgba(250,241,128,.45);cursor:pointer;font:600 1.1rem 'Chakra Petch',monospace;color:var(--gold);transition:.25s;animation:drop .9s .3s both}
+.ip:hover{border-color:var(--gold);background:rgba(0,0,0,.55)}
+.ip i{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--gold);color:var(--wine)}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;animation:drop .9s .45s both}
+/* sections */
+section{padding:90px 5%;max-width:1200px;margin:0 auto}
+.hd{text-align:center;margin-bottom:48px}
+.hd h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.2}
+.hd p{color:var(--mut);margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:30px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(241,154,12,.55)}
+.card h3{font-size:1.3rem;margin-bottom:8px}
+.card p{color:var(--mut)}
+.ic{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:18px;background:linear-gradient(135deg,var(--red),var(--em));color:#fff;box-shadow:0 8px 22px rgba(190,21,34,.45)}
+/* stats */
+.stats{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:-20px;padding:0 5%}
+.stat{min-width:210px;text-align:center;padding:22px 30px;border-radius:20px;background:linear-gradient(160deg,rgba(88,16,24,.75),rgba(21,11,45,.7));border:1px solid rgba(190,21,34,.5)}
+.stat b{display:block;font:1.6rem 'Press Start 2P',monospace;color:var(--gold)}
+.stat span{color:var(--mut);font-size:.95rem}
+/* steps */
+.step{display:flex;gap:18px;align-items:flex-start}
+.n{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font:.9rem 'Press Start 2P',monospace;background:var(--gold);color:var(--wine)}
+.step code{color:var(--gold);word-break:break-all}
+/* status */
+.status{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;max-width:860px;margin:0 auto}
+.status .big{display:flex;align-items:center;gap:12px;font:1.2rem 'Press Start 2P',monospace}
+.rows p{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--bd);color:var(--mut)}
+.rows p:last-child{border:0}
+.rows b{color:var(--tx)}
+.meter{height:10px;border-radius:9px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:18px}
+.meter i{display:block;height:100%;width:0;background:var(--grad);transition:width 1s}
+/* testimoni */
+.tm{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.tq{--t:var(--pur);position:relative;display:flex;flex-direction:column;gap:20px;padding:32px 28px 26px;border-radius:20px;background:var(--card);border:1px solid var(--bd);border-top:4px solid var(--t);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);overflow:hidden}
+.tq::before{content:'\201C';position:absolute;top:2px;right:20px;font:6rem/1 'Press Start 2P',monospace;color:var(--t);opacity:.22}
+.tq p{position:relative;font-size:1.08rem}
+.tp{display:flex;align-items:center;gap:14px;margin-top:auto}
+.tp img{width:54px;height:54px;border-radius:12px;image-rendering:pixelated;background:rgba(255,255,255,.08);flex:none}
+.tp b{display:block;line-height:1.3}
+.tp span{display:inline-block;margin-top:3px;padding:1px 11px;border-radius:99px;background:var(--t);color:var(--tc,#fff);font-size:.78rem;font-weight:700}
+.tcta{text-align:center;margin-top:34px}
+.soc{display:flex;justify-content:center;gap:10px;margin-top:20px}
+.soc a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);color:var(--tx);text-decoration:none;transition:.25s}
+.soc a:hover{background:var(--pink);transform:translateY(-3px)}
+/* shop */
+.shop{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,360px));justify-content:center;gap:26px}
+.shop a.card{text-decoration:none;color:var(--tx);display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.price{font:1.05rem 'Press Start 2P',monospace;color:var(--gold);margin:12px 0 18px}
+.shop .btn{margin-top:auto}
+.cta{max-width:1100px;margin:30px auto 0;padding:64px 6%;border-radius:32px;text-align:center;background:linear-gradient(135deg,var(--wine),var(--red) 60%,var(--em));box-shadow:0 30px 80px rgba(190,21,34,.35)}
+.cta h2{font-size:clamp(1.7rem,4vw,2.6rem)}
+.cta p{margin:10px 0 28px;color:#ffe4dd}
+/* modal + toast */
+.modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(10,4,24,.8);backdrop-filter:blur(6px);z-index:2000}
+.modal.on{display:grid}
+.mc{position:relative;width:min(92%,460px);padding:38px 32px;border-radius:24px;text-align:center;background:linear-gradient(160deg,#2a1450,var(--bg));border:1px solid var(--bd);box-shadow:0 30px 80px rgba(0,0,0,.6);animation:drop .35s both}
+.mc h2{margin-bottom:18px}
+.mc>p{color:var(--mut);margin:-4px 0 24px}
+.mc .x{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.08);color:var(--tx);cursor:pointer}
+.mc .rows{text-align:left;margin-bottom:24px}
+.mb{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+#toast{position:fixed;bottom:28px;left:50%;transform:translate(-50%,30px);opacity:0;pointer-events:none;padding:12px 24px;border-radius:99px;background:var(--gold);color:var(--wine);font-weight:700;z-index:4000;transition:.35s}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+/* footer */
+footer{margin-top:90px;padding:50px 5% 24px;background:rgba(21,11,45,.85);border-top:1px solid var(--bd)}
+.fc{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;max-width:1200px;margin:0 auto}
+footer h3{color:var(--or);margin-bottom:16px}
+footer p,footer li a{color:var(--mut)}
+footer ul{list-style:none}
+footer li{margin-bottom:10px}
+footer li a{text-decoration:none;transition:.2s}
+footer li a:hover{color:var(--gold)}
+footer li i{width:22px;color:var(--em)}
+.fb{max-width:1200px;margin:34px auto 0;padding-top:22px;border-top:1px solid var(--bd);text-align:center;color:var(--mut);font-size:.9rem}
+/* tablet + mobile: collapsed menu */
+@media(max-width:1080px){
+.links{display:none;position:absolute;top:calc(100% + 10px);left:0;right:0;flex-direction:column;gap:4px;padding:12px;border-radius:24px;background:rgba(21,11,45,.97);border:1px solid var(--bd);max-height:calc(100svh - 100px);overflow-y:auto;overscroll-behavior:contain}
+.links.open{display:flex}
+.links a{padding:14px 18px;font-size:1.05rem;min-height:48px;display:flex;align-items:center}
+#burger{display:block}
+}
+@media(max-width:860px){
+.status,.fc{grid-template-columns:1fr}
+section{padding:64px 5%}
+.hd{margin-bottom:34px}
+.lang button{padding:9px 13px;min-height:36px}
+}
+@media(max-width:560px){
+.acts .btn span{display:none}
+.acts .btn{padding:10px 14px;min-width:42px;min-height:42px;justify-content:center}
+.ip{font-size:.9rem;padding-left:16px;max-width:100%}
+.ip span{overflow-wrap:anywhere;text-align:left}
+nav{padding:7px 8px 7px 12px;gap:6px}
+.brand img{height:38px}
+.acts{gap:6px}
+.hero{padding:110px 5% 50px}
+.hero p{font-size:1.02rem}
+.hero-btns{width:100%;flex-direction:column;align-items:stretch}
+.hero-btns .btn,.cta .btn{justify-content:center;width:100%}
+.stats{margin-top:0;gap:12px}
+.stat{min-width:0;flex:1 1 140px;padding:18px 14px}
+.stat b{font-size:1.2rem}
+.card{padding:22px}
+.step{flex-direction:column;gap:12px}
+.status .big{font-size:1rem}
+.rows p{font-size:.95rem}
+.cta{padding:44px 6%;border-radius:24px}
+.mc{padding:32px 20px;max-height:92svh;overflow-y:auto}
+.mb .btn{flex:1 1 100%;justify-content:center}
+.soc a{width:44px;height:44px}
+footer{padding:40px 5% calc(24px + env(safe-area-inset-bottom));margin-top:50px}
+footer li a{display:inline-block;padding:4px 0}
+#toast{width:max-content;max-width:90vw;text-align:center;bottom:calc(20px + env(safe-area-inset-bottom))}
+}
+@media(max-width:400px){
+.brand img{height:34px}
+.lang button{padding:8px 10px}
+}
+@media(hover:none){
+.btn:hover,.card:hover,.soc a:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){*,*::before{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<div id="ld"><img src="logo.png" alt="" onerror="this.style.display='none'"><div class="ltx" id="lp">0%</div></div>
+<canvas id="fx"></canvas>
+
+<nav id="nav">
+  <a class="brand" href="index.html"><img src="logo.png" alt="Logo ICIKI NETWORK" onerror="this.style.display='none'"></a>
+  <div class="links" id="links">
+    <a class="act" href="index.html" aria-current="page">Beranda</a><a href="shop.2027.html">Toko</a><a href="team.2027.html">Tim</a><a href="status.2027.html">Status</a><a href="help.2027.html">Bantuan</a><a href="rules.2027.html">Aturan</a><a href="ToS.2027.html">ToS</a>
+  </div>
+  <div class="acts">
+    <div class="lang" role="group" aria-label="Language"><button data-l="id" class="on" aria-pressed="true">ID</button><button data-l="en" aria-pressed="false">EN</button></div>
+    <a href="https://minecraft-mp.com/server/346397/vote/" class="btn gold sm" target="_blank" rel="noopener" aria-label="Vote"><i class="fas fa-vote-yea"></i><span>Vote</span></a>
+    <a href="https://discord.gg/JYS6N85TjE" class="btn sm" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i><span>Discord</span></a>
+    <button id="burger" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="pill"><span class="dot unk" id="hDot"></span><span id="hTxt">Mengecek status server…</span></div>
+  <h1>ICIKI<br>NETWORK</h1>
+  <p>Server Minecraft survival dengan fitur kustom, event seru, dan komunitas yang ramah. Satu IP, ratusan teman.</p>
+  <button class="ip" onclick="copyIP()" aria-label="Salin IP server"><span data-ip></span><i class="fas fa-copy"></i></button>
+  <div class="hero-btns">
+    <button class="btn" onclick="openModal()"><i class="fas fa-play"></i> Gabung Server</button>
+    <a href="shop.2027.html" class="btn gold"><i class="fas fa-shopping-cart"></i> Beli Rank</a>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b data-to="250" data-suf="+">250+</b><span>Anggota</span></div>
+  <div class="stat"><b>24/7</b><span>Server online</span></div>
+  <div class="stat"><b data-to="50" data-suf="+">50+</b><span>Dunia</span></div>
+</div>
+
+<section id="fitur">
+  <div class="hd"><h2>Mengapa Memilih ICIKI NETWORK?</h2><p>Dibangun supaya survival terasa lancar, rapi, dan ramai.</p></div>
+  <div class="grid">
+    <div class="card"><div class="ic"><i class="fas fa-bolt"></i></div><h3>Latensi Rendah</h3><p>Server yang dioptimalkan dengan ping rendah, jadi gameplay tetap lancar untuk semua pemain.</p></div>
+    <div class="card"><div class="ic"><i class="fas fa-layer-group"></i></div><h3>UI Intuitif</h3><p>GUI dan navigasi yang mudah dipahami, dari menu server sampai toko dalam game.</p></div>
+    <div class="card"><div class="ic"><i class="fas fa-gem"></i></div><h3>Fitur Kaya</h3><p>Item kustom dan berbagai fitur menarik yang membuat petualangan survival-mu lebih seru.</p></div>
+    <div class="card"><div class="ic"><i class="fas fa-earth-asia"></i></div><h3>50+ Dunia</h3><p>Banyak dunia untuk dijelajahi, dibangun, dan dijadikan markas.</p></div>
+    <div class="card"><div class="ic"><i class="fas fa-users"></i></div><h3>Komunitas Aktif</h3><p>Lebih dari 250 anggota yang siap bermain bareng. Temukan mereka di Discord.</p></div>
+    <div class="card"><div class="ic"><i class="fas fa-trophy"></i></div><h3>Event Rutin</h3><p>Ikuti event dan raih hadiah bersama pemain lain.</p></div>
+  </div>
+</section>
+
+<section id="cara-main">
+  <div class="hd"><h2>Cara Bergabung</h2><p>Tiga langkah, kurang dari satu menit.</p></div>
+  <div class="grid">
+    <div class="card step"><div class="n">1</div><div><h3>Buka Minecraft Java</h3><p>Pilih versi <b>1.20.1</b>, lalu buka menu Multiplayer.</p></div></div>
+    <div class="card step"><div class="n">2</div><div><h3>Tambah Server</h3><p>Klik Add Server dan tempel IP <code data-ip></code></p></div></div>
+    <div class="card step"><div class="n">3</div><div><h3>Masuk dan Bermain</h3><p>Gabung server, lalu masuk ke Discord untuk info event terbaru.</p></div></div>
+  </div>
+</section>
+
+<section id="status">
+  <div class="hd"><h2>Status Server</h2></div>
+  <div class="card status">
+    <div>
+      <div class="big"><span class="dot unk" id="sDot"></span><span id="sTxt">…</span></div>
+      <h3 style="margin-top:18px">Server Utama Survival</h3>
+      <p data-ip></p>
+      <div class="meter"><i id="mf" style="width:100%"></i></div>
+    </div>
+    <div class="rows">
+      <p>Pemain online <b id="pl">N/A</b></p>
+      <p>Versi <b>1.20.1</b></p>
+      <p>Edisi <b>Khusus Java</b></p>
+      <p>Diperbarui <b id="upd">–</b></p>
+    </div>
+  </div>
+</section>
+
+<section id="testimoni">
+  <div class="hd"><h2>Kata Para Pemain</h2><p>Pemain yang sudah membeli rank membagikan pengalamannya.</p></div>
+  <div class="tm" id="tm"></div>
+  <div class="tcta"><a href="https://discord.gg/JYS6N85TjE" class="btn" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Bagikan Testimoni</a></div>
+</section>
+
+<section id="toko">
+  <div class="hd"><h2>Produk Kami</h2><p>Dukung server dan dapatkan keuntungan eksklusif.</p></div>
+  <div class="shop">
+    <a href="shop.2027.html" class="card"><div class="ic"><i class="fas fa-crown"></i></div><h3>Rank Premium</h3><p>Buka akses ke fitur eksklusif dan perintah dengan sistem rank premium kami.</p><div class="price">Mulai Rp 10.000</div><span class="btn">Lihat Rank</span></a>
+    <a href="shop.2027.html" class="card"><div class="ic"><i class="fas fa-gem"></i></div><h3>Gems &amp; Mata Uang</h3><p>Beli mata uang dalam game untuk membeli item, kosmetik, dan lainnya.</p><div class="price">Mulai Rp 1.000</div><span class="btn gold">Lihat Gems</span></a>
+  </div>
+  <div class="cta">
+    <h2>Siap Memulai Petualanganmu?</h2>
+    <p>Salin IP, masuk ke server, dan bertemu pemain lain hari ini.</p>
+    <button class="btn gold" onclick="openModal()"><i class="fas fa-play"></i> Gabung Server</button>
+  </div>
+</section>
+
+<div id="ipModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="mc">
+    <button class="x" data-close aria-label="Tutup"><i class="fas fa-xmark"></i></button>
+    <div class="ic" style="margin:0 auto 16px"><i class="fas fa-server"></i></div>
+    <h2 id="mt">Informasi Server</h2>
+    <div class="rows"><p>IP <b data-ip></b></p><p>Versi <b>1.20.1</b></p><p>Edisi <b>Khusus Java</b></p></div>
+    <div class="mb"><button class="btn" onclick="copyIP()"><i class="fas fa-copy"></i> Salin IP</button><button class="btn ghost" data-close>Tutup</button></div>
+  </div>
+</div>
+
+<div id="dcModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="dt">
+  <div class="mc">
+    <button class="x" data-close aria-label="Tutup"><i class="fas fa-xmark"></i></button>
+    <div class="ic" style="margin:0 auto 16px;background:linear-gradient(135deg,var(--pur),var(--pink))"><i class="fab fa-discord"></i></div>
+    <h2 id="dt">Komunitas Discord</h2>
+    <p>Ngobrol dengan pemain lain, ikuti event, dan minta bantuan staf.</p>
+    <div class="mb"><a class="btn" href="https://discord.gg/JYS6N85TjE" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Gabung Discord</a><button class="btn ghost" data-close>Tutup</button></div>
+  </div>
+</div>
+<div id="toast" role="status"></div>
+
+<footer>
+  <div class="fc">
+    <div><h3>ICIKI NETWORK</h3><p>Petualangan Minecraft survival multiplayer dengan fitur kustom, event, dan komunitas yang luar biasa.</p>
+      <div class="soc" style="justify-content:flex-start"><a href="https://discord.gg/JYS6N85TjE" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div></div>
+    <div><h3>Tautan Cepat</h3><ul><li><a href="index.html"><i class="fas fa-home"></i>Beranda</a></li><li><a href="shop.2027.html"><i class="fas fa-store"></i>Toko</a></li><li><a href="#" id="dcLink"><i class="fas fa-users"></i>Komunitas</a></li><li><a href="help.2027.html"><i class="fas fa-circle-question"></i>Bantuan</a></li></ul></div>
+    <div><h3>Dukungan</h3><ul><li><a href="help.2027.html"><i class="fas fa-headset"></i>Hubungi Kami</a></li><li><a href="ToS.2027.html"><i class="fas fa-file-lines"></i>Syarat Layanan</a></li><li><a href="help.2027.html"><i class="fas fa-shield-halved"></i>Kebijakan Privasi</a></li><li><a href="help.2027.html"><i class="fas fa-rotate-left"></i>Kebijakan Pengembalian</a></li></ul></div>
+  </div>
+  <div class="fb">&copy; <span id="yr"></span> ICIKI NETWORK. All rights reserved.</div>
+</footer>
+
+<script>
+// ===== Konfigurasi: ubah IP di sini =====
+const CFG={ip:'play.iciki.net:25565'};
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s),addr=CFG.ip;
+
+// ===== Loading screen (tampil saat pertama buka dan saat refresh) =====
+(()=>{
+  const ld=$('#ld'),root=document.documentElement;
+  if(root.classList.contains('seen'))return;
+  try{sessionStorage.setItem('ld','1')}catch(e){}
+  const p=$('#lp'),t0=performance.now();let v=0,ok=false;
+  const go=()=>{ok=true};
+  Promise.all([new Promise(r=>document.readyState==='complete'?r():addEventListener('load',r)),document.fonts?document.fonts.ready:0]).then(go);
+  setTimeout(go,5000);
+  (function tick(t){
+    v+=((ok&&t-t0>1200?1:.9)-v)*.07+.002;
+    if(v>=.995)v=1;
+    p.textContent=Math.round(v*100)+'%';
+    if(v<1)return requestAnimationFrame(tick);
+    setTimeout(()=>{ld.classList.add('out');setTimeout(()=>root.classList.add('seen'),500)},250);
+  })(t0);
+})();
+
+$$('[data-ip]').forEach(e=>e.textContent=addr);
+$('#yr').textContent=new Date().getFullYear();
+
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),2200)}
+function copyIP(){
+  const ok=()=>toast(L.copied+addr);
+  if(navigator.clipboard)navigator.clipboard.writeText(addr).then(ok).catch(fb);else fb();
+  function fb(){const i=document.createElement('input');i.value=addr;document.body.append(i);i.select();document.execCommand('copy');i.remove();ok()}
+}
+// modals (server info + Discord)
+const modal=$('#ipModal'),dcModal=$('#dcModal');
+function openModal(m){(m=m||modal).classList.add('on');m.querySelector('.ghost').focus()}
+function closeModals(){$$('.modal.on').forEach(m=>m.classList.remove('on'))}
+$$('[data-close]').forEach(b=>b.onclick=closeModals);
+$$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModals()}));
+addEventListener('keydown',e=>{if(e.key==='Escape')closeModals()});
+$('#dcLink').onclick=e=>{e.preventDefault();openModal(dcModal)};
+
+// nav + progress
+const nav=$('#nav'),bar=$('#bar'),links=$('#links'),burger=$('#burger');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('sc',scrollY>40);
+  bar.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100||0)+'%';
+},{passive:true});
+burger.onclick=()=>burger.setAttribute('aria-expanded',links.classList.toggle('open'));
+const closeMenu=()=>{links.classList.remove('open');burger.setAttribute('aria-expanded','false')};
+links.addEventListener('click',closeMenu);
+document.addEventListener('click',e=>{if(!nav.contains(e.target))closeMenu()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+addEventListener('resize',()=>{if(innerWidth>1080)closeMenu()});
+
+// counter
+$$('[data-to]').forEach(el=>{
+  const o=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting)return;o.disconnect();
+    const to=+el.dataset.to,suf=el.dataset.suf||'',t0=performance.now();
+    (function f(t){const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(to*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(f)})(t0);
+  }),{threshold:.6});o.observe(el);
+});
+
+// ===== Bahasa / Language (ID / EN) =====
+const EN={'Fitur':'Features','Cara Main':'How to Play','Tim':'Team','Toko':'Shop','Aturan':'Rules',
+'Server Minecraft survival dengan fitur kustom, event seru, dan komunitas yang ramah. Satu IP, ratusan teman.':'A Minecraft survival server with custom features, fun events and a friendly community. One IP, hundreds of friends.',
+'Gabung Server':'Join Server','Beli Rank':'Buy Rank','Anggota':'Members','Dunia':'Worlds',
+'Mengapa Memilih ICIKI NETWORK?':'Why Choose ICIKI NETWORK?','Dibangun supaya survival terasa lancar, rapi, dan ramai.':'Built to make survival smooth, polished and lively.',
+'Latensi Rendah':'Low Latency','Server yang dioptimalkan dengan ping rendah, jadi gameplay tetap lancar untuk semua pemain.':'An optimized server with low ping, so gameplay stays smooth for every player.',
+'UI Intuitif':'Intuitive UI','GUI dan navigasi yang mudah dipahami, dari menu server sampai toko dalam game.':'Easy-to-understand GUIs and navigation, from server menus to the in-game shop.',
+'Fitur Kaya':'Rich Features','Item kustom dan berbagai fitur menarik yang membuat petualangan survival-mu lebih seru.':'Custom items and plenty of features that make your survival adventure more fun.',
+'50+ Dunia':'50+ Worlds','Banyak dunia untuk dijelajahi, dibangun, dan dijadikan markas.':'Plenty of worlds to explore, build in and call home.',
+'Komunitas Aktif':'Active Community','Lebih dari 250 anggota yang siap bermain bareng. Temukan mereka di Discord.':'Over 250 members ready to play together. Find them on Discord.',
+'Event Rutin':'Regular Events','Ikuti event dan raih hadiah bersama pemain lain.':'Join events and win prizes alongside other players.',
+'Cara Bergabung':'How to Join','Tiga langkah, kurang dari satu menit.':'Three steps, under a minute.','Buka Minecraft Java':'Open Minecraft Java',
+'Pilih versi':'Choose version',', lalu buka menu Multiplayer.':', then open the Multiplayer menu.','Tambah Server':'Add Server','Klik Add Server dan tempel IP':'Click Add Server and paste the IP',
+'Masuk dan Bermain':'Join and Play','Gabung server, lalu masuk ke Discord untuk info event terbaru.':'Join the server, then hop into Discord for the latest event news.',
+'Status Server':'Server Status','Server Utama Survival':'Main Survival Server','Pemain online':'Players online','Versi':'Version','Edisi':'Edition','Khusus Java':'Java only','Diperbarui':'Updated',
+'Kata Para Pemain':'What Players Say','Pemain yang sudah membeli rank membagikan pengalamannya.':'Players who bought a rank share their experience.','Bagikan Testimoni':'Share a Testimonial',
+'Produk Kami':'Our Products','Dukung server dan dapatkan keuntungan eksklusif.':'Support the server and get exclusive perks.',
+'Buka akses ke fitur eksklusif dan perintah dengan sistem rank premium kami.':'Unlock exclusive features and commands with our premium rank system.',
+'Mulai Rp 10.000':'From Rp 10,000','Lihat Rank':'View Ranks','Gems & Mata Uang':'Gems & Currency',
+'Beli mata uang dalam game untuk membeli item, kosmetik, dan lainnya.':'Buy in-game currency to get items, cosmetics and more.','Mulai Rp 1.000':'From Rp 1,000','Lihat Gems':'View Gems',
+'Siap Memulai Petualanganmu?':'Ready to Start Your Adventure?','Salin IP, masuk ke server, dan bertemu pemain lain hari ini.':'Copy the IP, join the server and meet other players today.',
+'Informasi Server':'Server Information','Salin IP':'Copy IP','Tutup':'Close',
+'Komunitas Discord':'Discord Community','Ngobrol dengan pemain lain, ikuti event, dan minta bantuan staf.':'Chat with other players, join events and ask staff for help.','Gabung Discord':'Join Discord',
+'Petualangan Minecraft survival multiplayer dengan fitur kustom, event, dan komunitas yang luar biasa.':'A Minecraft survival multiplayer adventure with custom features, events and an amazing community.',
+'Tautan Cepat':'Quick Links','Dukungan':'Support','Beranda':'Home','Komunitas':'Community','Bantuan':'Help','Hubungi Kami':'Contact Us',
+'Syarat Layanan':'Terms of Service','Kebijakan Privasi':'Privacy Policy','Kebijakan Pengembalian':'Refund Policy'};
+const D={id:{chk:'Mengecek status server…',on:(o,m)=>'Server online · '+o+'/'+m+' pemain',off:'Server sedang offline',unk:'Status tidak dapat dimuat',ON:'ONLINE',OFF:'OFFLINE',UNK:'TIDAK DIKETAHUI',copied:'IP disalin: '},
+en:{chk:'Checking server status…',on:(o,m)=>'Server online · '+o+'/'+m+' players',off:'Server is offline',unk:'Status unavailable',ON:'ONLINE',OFF:'OFFLINE',UNK:'UNKNOWN',copied:'IP copied: '}};
+let lang='id',L=D.id,S={s:'chk',o:0,m:0};
+try{if(localStorage.getItem('lang')==='en')lang='en'}catch(e){}
+const skip=new Set(['hTxt','sTxt','upd','pl','toast','yr']),TN=[];
+for(const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);w.nextNode();){
+  const n=w.currentNode,p=n.parentElement,k=n.nodeValue.trim();
+  if(k&&EN[k]&&!skip.has(p.id)&&!p.closest('script,style'))TN.push([n,n.nodeValue]);
+}
+function renderStatus(){
+  const k=S.s;
+  $('#hDot').className=$('#sDot').className='dot'+(k==='on'?'':k==='off'?' off':' unk');
+  $('#hTxt').textContent=k==='on'?L.on(S.o,S.m):L[k];
+  $('#sTxt').textContent=k==='on'?L.ON:k==='off'?L.OFF:k==='chk'?'…':L.UNK;
+}
+// ===== Testimoni pemain: GANTI dengan testimoni asli dari pemain =====
+// n = username Minecraft (foto kepala diambil otomatis), r = nama rank yang dibeli, q = [Indonesia, English]
+const TESTI=[
+ {n:'NamaPemain1',r:'Elite',q:['Tulis testimoni pemain di sini. Ganti teks ini dengan komentar asli dari pemain yang sudah membeli rank.','Write a player testimonial here. Replace this text with a real comment from a player who bought a rank.']},
+ {n:'NamaPemain2',r:'VIP',q:['Tulis testimoni pemain di sini. Ganti teks ini dengan komentar asli dari pemain yang sudah membeli rank.','Write a player testimonial here. Replace this text with a real comment from a player who bought a rank.']},
+ {n:'NamaPemain3',r:'Knight',q:['Tulis testimoni pemain di sini. Ganti teks ini dengan komentar asli dari pemain yang sudah membeli rank.','Write a player testimonial here. Replace this text with a real comment from a player who bought a rank.']}
+];
+const RC={Fighter:'#8A35C7',Warrior:'#8A35C7',Knight:'#FF0066',VIP:'#FF0066',Sergeant:'#BE1522',Lieutenant:'#BE1522',Captain:'#E3592F',MVP:'#E3592F',Viscount:'#F19A0C',Earl:'#F19A0C',Duke:'#FAF180',Elite:'#FAF180',Custom:'#FF0066'};
+const DK=['Viscount','Earl','Duke','Elite'];
+function renderT(){
+  const l=+(lang==='en');
+  $('#tm').innerHTML=TESTI.map(t=>`<figure class="tq" style="--t:${RC[t.r]||'#8A35C7'};--tc:${DK.includes(t.r)?'#2b1000':'#fff'}"><blockquote><p>${t.q[l]}</p></blockquote><figcaption class="tp"><img src="https://mc-heads.net/avatar/${encodeURIComponent(t.n)}/64" alt="${t.n}" loading="lazy" onerror="this.style.visibility='hidden'"><div><b>${t.n}</b><span>${l?'Bought':'Membeli'} ${t.r} Rank</span></div></figcaption></figure>`).join('');
+}
+function setLang(l){
+  lang=l;L=D[l];document.documentElement.lang=l;
+  for(const[n,o]of TN){const k=o.trim();n.nodeValue=l==='en'?o.replace(k,()=>EN[k]):o}
+  $$('.lang button').forEach(b=>{const on=b.dataset.l===l;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on)});
+  document.title='ICIKI NETWORK | '+(l==='en'?'Official Website':'Website Resmi');
+  renderStatus();renderT();
+  try{localStorage.setItem('lang',l)}catch(e){}
+}
+$$('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+
+// live server status (api.mcsrvstat.us)
+async function status(){
+  try{
+    const d=await (await fetch('https://api.mcsrvstat.us/3/'+addr)).json(),p=d.players||{online:0,max:0};
+    if(d.online){S={s:'on',o:p.online,m:p.max};$('#pl').textContent=p.online+' / '+p.max}
+    else{S={s:'off',o:0,m:0};$('#pl').textContent='0'}
+    $('#upd').textContent=new Date().toLocaleTimeString(lang==='en'?'en-US':'id-ID',{hour:'2-digit',minute:'2-digit'});
+  }catch(e){S={s:'unk',o:0,m:0}}
+  renderStatus();
+}
+setLang(lang);status();setInterval(status,60000);
+
+// ember particles (pixel-style)
+(()=>{
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const c=$('#fx'),x=c.getContext('2d'),cols=['#F19A0C','#E3592F','#FAF180','#FF0066','#8A35C7'];let w,h;
+  const rs=()=>{w=c.width=innerWidth;h=c.height=innerHeight};rs();addEventListener('resize',rs);
+  const mk=r=>({x:Math.random()*w,y:r?Math.random()*h:h+10,s:Math.random()*3+2,v:Math.random()*.6+.2,d:Math.random()*6.28,c:cols[Math.random()*5|0],a:Math.random()*.6+.2});
+  const P=Array.from({length:innerWidth<700?24:60},()=>mk(true));
+  (function f(){
+    x.clearRect(0,0,w,h);
+    for(const p of P){p.y-=p.v;p.d+=.02;p.x+=Math.sin(p.d)*.4;if(p.y<-10)Object.assign(p,mk());x.globalAlpha=p.a;x.fillStyle=p.c;x.fillRect(p.x,p.y,p.s,p.s)}
+    requestAnimationFrame(f);
+  })();
+})();
+</script>
+</body>
+</html>
